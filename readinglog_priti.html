@@ -7,6 +7,8 @@
     <title>Reading Log</title>
     <script type='text/javascript' src='http://epilog.stanford.edu/javascript/epilog.js'></script>
     <script type='text/javascript' src='http://worksheets.stanford.edu/javascript/worksheets.js'></script>
+    <style type=“text/css”>
+    </style>
   </head>
   
 <!--=======================================================================-->
@@ -40,12 +42,17 @@
           <td style="width: 560px">
             <select id="fall_one" style="width: 400px" onchange="modselector(this)">
                 <option value="unknown"></option>
+                <option value="horror" disabled>Horror</option>
                 <option value="dracula">"Dracula" by Bram Stoker (418, easy)</option>
+                <option value="theturnofthescrew">"The Turn of the Screw" by Henry James (124, easy)</option>
                 <option value="thewomaninblack">"The Woman in Black" by Susan Hill (208, easy)</option>
                 <option value="theshining">"The Shining" by Stephen King (688, medium)</option>
                 <option value="houseofleaves">"House of Leaves" by Mark Z. Danielewski (705, medium)</option>
+                <option value="americanpsycho">"American Psycho" by Bret Easton Ellis (399, medium)</option>
                 <option value="it">"IT" by Stephen King (1138, hard)</option>
                 <option value="theluminousdead">"The Luminous Dead" by Caitlin Starling (432, hard)</option>
+                <option value="theterror">"The Terror" by Dan Simmons (960, hard)</option>
+                <option value="scifi" disabled>Sci-Fi</option>
                 <option value="endersgame">"Ender's Game" by Orson Scott Card (352, easy)</option>
                 <option value="readyplayerone">"Ready Player One" by Ernest Cline (386, easy)</option>
                 <option value="themartian">"The Martian" by Andy Weir (384, easy)</option>
@@ -55,15 +62,17 @@
                 <option value="cryptonomicon">"Cryptonomicon" by Neal Stephenson (1168, hard)</option>
                 <option value="anathem">"Anathem" by Neal Stephenson (960, hard)</option>
                 <option value="thebookofthenewsun">"The Book of the New Sun" by Gene Wolfe (912, hard)</option>
+                <option value="fantasy" disabled>Fantasy</option>
                 <option value="stardust">"Stardust" by Neil Gaiman (288, easy)</option>
-               <option value="thenightcircus">"The Night Circus" by Erin Morgenstern (512, easy)</option>
-               <option value="uprooted">"Uprooted" by Naomi Novik (464, easy)</option>
-               <option value="thenameofthewind">"The Name of the Wind" by Patrick Rothfuss (662, medium)</option>
-               <option value="sabriel">"Sabriel" by Garth Nix (491, medium)</option>
-               <option value="graceling">"Graceling" by Kristin Cashore (471, medium)</option>
-               <option value="thewayofkings">"The Way of Kings" by Brandon Sanderson (1007, hard)</option>
-               <option value="thebladeitself">"The Blade Itself" by Joe Abercrombie (519, hard)</option>
-               <option value="thefinalempire">"The Final Empire" by Michael J. Sullivan (541, hard)</option>
+                <option value="thenightcircus">"The Night Circus" by Erin Morgenstern (512, easy)</option>
+                <option value="uprooted">"Uprooted" by Naomi Novik (464, easy)</option>
+                <option value="thenameofthewind">"The Name of the Wind" by Patrick Rothfuss (662, medium)</option>
+                <option value="sabriel">"Sabriel" by Garth Nix (491, medium)</option>
+                <option value="graceling">"Graceling" by Kristin Cashore (471, medium)</option>
+                <option value="thewayofkings">"The Way of Kings" by Brandon Sanderson (1007, hard)</option>
+                <option value="thebladeitself">"The Blade Itself" by Joe Abercrombie (519, hard)</option>
+                <option value="thefinalempire">"The Final Empire" by Michael J. Sullivan (541, hard)</option>
+                <option value="nonfic" disabled>Non-Fic</option>
                 <option value="becoming">"Becoming" by Michelle Obama (426, easy)</option>
                 <option value="theimmortallife">"The Immortal Life of Henrietta Lacks" by Rebecca Skloot (381, easy)</option>
                 <option value="mindset">“Mindset” by Carol Dweck (320, easy)</option>
@@ -73,6 +82,7 @@
                 <option value="theseven">"The 7 Habits of Highly Effective People" by Stephen R. Covey (384, hard)</option>
                 <option value="thinking">"Thinking, Fast and Slow" by Daniel Kahneman (512, hard)</option>
                 <option value="incoldblood">"In Cold Blood" by Truman Capote (343, hard)</option>
+                <option value="series" disabled>Series</option>
                 <option value="hpone">"Harry Potter and the Philosopher's Stone" by J.K. Rowling (223, easy)</option>
                 <option value="hptwo">"Harry Potter and the Chamber of Secrets" by J.K. Rowling (251, easy)</option>
                 <option value="hpthree">"Harry Potter and the Prisoner of Azkaban" by J.K. Rowling (317, easy)</option>
@@ -84,6 +94,7 @@
                 <option value="lotrone">"The Fellowship of the Ring" by J.R.R. Tolkien (398, hard)</option>
                 <option value="lotrtwo">"The Two Towers" by J.R.R. Tolkien (447, hard)</option>
                 <option value="lotrthree">"The Return of the King" by J.R.R. Tolkien (416, hard)</option>
+                <option value="french" disabled>French</option>
                 <option value="lepetit">"Le Petit Prince" by Antoine de Saint-Exupéry (96, easy)</option>
                 <option value="meursault">"The Meursault Investigation" by Kamel Daoud (144, easy)</option>
                 <option value="chateau">"Le Château des Étoiles, Tome 1: 1869, La Conquête de l'espace" by Alex Alice (64, easy)</option>
@@ -93,6 +104,7 @@
                 <option value="lesmiserables">"Les Misérables" by Victor Hugo (1900, hard)</option>
                 <option value="lahorde">"La Horde du Contrevent" by Alain Damasio (688, hard)</option>
                 <option value="lepee">"L'Épée de Vérité, Tome 1: La Première Leçon du Sorcier" by Terry Goodkind (800, hard)</option>
+                <option value="spanish" disabled>Spanish</option>
                 <option value="memorias">"Memorias de Idhún: La Resistencia" by Laura Gallego García (416, easy)</option>
                 <option value="elprincipe">"El Príncipe de la Niebla" by Carlos Ruiz Zafón (232, easy)</option>
                 <option value="pedroparamo">"Pedro Páramo" by Juan Rulfo (124, medium)</option>
@@ -101,6 +113,7 @@
                 <option value="laciudad">"La Ciudad de los Prodigios" by Eduardo Mendoza (416, hard)</option>
                 <option value="ellaberinto">"El Laberinto de los Espíritus" by Carlos Ruiz Zafón (928, hard)</option>
                 <option value="eltemor">"El Temor de un Hombre Sabio" by Patrick Rothfuss (1040, hard)</option>
+                <option value="turkish" disabled>Turkish</option>
                 <option value="zaman">"Zaman Çarkı: Dönen Çark" by Murat Sönmez (320, easy)</option>
                 <option value="tuhaf">"Tuhaf Hikayeler Dükkanı" by Mehmet Berk Yaltırık (256, easy)</option>
                 <option value="biryol">"Bir Yol Hikayesi" by Hakan Bıçakcı (192, easy)</option>
@@ -118,12 +131,17 @@
           <td style="width: 500px">
             <select id="fall_two" style="width: 400px" onchange="modselector(this)">
                 <option value="unknown"></option>
+                <option value="horror" disabled>Horror</option>
                 <option value="dracula">"Dracula" by Bram Stoker (418, easy)</option>
+                <option value="theturnofthescrew">"The Turn of the Screw" by Henry James (124, easy)</option>
                 <option value="thewomaninblack">"The Woman in Black" by Susan Hill (208, easy)</option>
                 <option value="theshining">"The Shining" by Stephen King (688, medium)</option>
                 <option value="houseofleaves">"House of Leaves" by Mark Z. Danielewski (705, medium)</option>
+                <option value="americanpsycho">"American Psycho" by Bret Easton Ellis (399, medium)</option>
                 <option value="it">"IT" by Stephen King (1138, hard)</option>
                 <option value="theluminousdead">"The Luminous Dead" by Caitlin Starling (432, hard)</option>
+                <option value="theterror">"The Terror" by Dan Simmons (960, hard)</option>
+                <option value="scifi" disabled>Sci-Fi</option>
                 <option value="endersgame">"Ender's Game" by Orson Scott Card (352, easy)</option>
                 <option value="readyplayerone">"Ready Player One" by Ernest Cline (386, easy)</option>
                 <option value="themartian">"The Martian" by Andy Weir (384, easy)</option>
@@ -133,15 +151,17 @@
                 <option value="cryptonomicon">"Cryptonomicon" by Neal Stephenson (1168, hard)</option>
                 <option value="anathem">"Anathem" by Neal Stephenson (960, hard)</option>
                 <option value="thebookofthenewsun">"The Book of the New Sun" by Gene Wolfe (912, hard)</option>
+                <option value="fantasy" disabled>Fantasy</option>
                 <option value="stardust">"Stardust" by Neil Gaiman (288, easy)</option>
-               <option value="thenightcircus">"The Night Circus" by Erin Morgenstern (512, easy)</option>
-               <option value="uprooted">"Uprooted" by Naomi Novik (464, easy)</option>
-               <option value="thenameofthewind">"The Name of the Wind" by Patrick Rothfuss (662, medium)</option>
-               <option value="sabriel">"Sabriel" by Garth Nix (491, medium)</option>
-               <option value="graceling">"Graceling" by Kristin Cashore (471, medium)</option>
-               <option value="thewayofkings">"The Way of Kings" by Brandon Sanderson (1007, hard)</option>
-               <option value="thebladeitself">"The Blade Itself" by Joe Abercrombie (519, hard)</option>
-               <option value="thefinalempire">"The Final Empire" by Michael J. Sullivan (541, hard)</option>
+                <option value="thenightcircus">"The Night Circus" by Erin Morgenstern (512, easy)</option>
+                <option value="uprooted">"Uprooted" by Naomi Novik (464, easy)</option>
+                <option value="thenameofthewind">"The Name of the Wind" by Patrick Rothfuss (662, medium)</option>
+                <option value="sabriel">"Sabriel" by Garth Nix (491, medium)</option>
+                <option value="graceling">"Graceling" by Kristin Cashore (471, medium)</option>
+                <option value="thewayofkings">"The Way of Kings" by Brandon Sanderson (1007, hard)</option>
+                <option value="thebladeitself">"The Blade Itself" by Joe Abercrombie (519, hard)</option>
+                <option value="thefinalempire">"The Final Empire" by Michael J. Sullivan (541, hard)</option>
+                <option value="nonfic" disabled>Non-Fic</option>
                 <option value="becoming">"Becoming" by Michelle Obama (426, easy)</option>
                 <option value="theimmortallife">"The Immortal Life of Henrietta Lacks" by Rebecca Skloot (381, easy)</option>
                 <option value="mindset">“Mindset” by Carol Dweck (320, easy)</option>
@@ -151,6 +171,7 @@
                 <option value="theseven">"The 7 Habits of Highly Effective People" by Stephen R. Covey (384, hard)</option>
                 <option value="thinking">"Thinking, Fast and Slow" by Daniel Kahneman (512, hard)</option>
                 <option value="incoldblood">"In Cold Blood" by Truman Capote (343, hard)</option>
+                <option value="series" disabled>Series</option>
                 <option value="hpone">"Harry Potter and the Philosopher's Stone" by J.K. Rowling (223, easy)</option>
                 <option value="hptwo">"Harry Potter and the Chamber of Secrets" by J.K. Rowling (251, easy)</option>
                 <option value="hpthree">"Harry Potter and the Prisoner of Azkaban" by J.K. Rowling (317, easy)</option>
@@ -162,6 +183,7 @@
                 <option value="lotrone">"The Fellowship of the Ring" by J.R.R. Tolkien (398, hard)</option>
                 <option value="lotrtwo">"The Two Towers" by J.R.R. Tolkien (447, hard)</option>
                 <option value="lotrthree">"The Return of the King" by J.R.R. Tolkien (416, hard)</option>
+                <option value="french" disabled>French</option>
                 <option value="lepetit">"Le Petit Prince" by Antoine de Saint-Exupéry (96, easy)</option>
                 <option value="meursault">"The Meursault Investigation" by Kamel Daoud (144, easy)</option>
                 <option value="chateau">"Le Château des Étoiles, Tome 1: 1869, La Conquête de l'espace" by Alex Alice (64, easy)</option>
@@ -171,6 +193,7 @@
                 <option value="lesmiserables">"Les Misérables" by Victor Hugo (1900, hard)</option>
                 <option value="lahorde">"La Horde du Contrevent" by Alain Damasio (688, hard)</option>
                 <option value="lepee">"L'Épée de Vérité, Tome 1: La Première Leçon du Sorcier" by Terry Goodkind (800, hard)</option>
+                <option value="spanish" disabled>Spanish</option>
                 <option value="memorias">"Memorias de Idhún: La Resistencia" by Laura Gallego García (416, easy)</option>
                 <option value="elprincipe">"El Príncipe de la Niebla" by Carlos Ruiz Zafón (232, easy)</option>
                 <option value="pedroparamo">"Pedro Páramo" by Juan Rulfo (124, medium)</option>
@@ -179,6 +202,7 @@
                 <option value="laciudad">"La Ciudad de los Prodigios" by Eduardo Mendoza (416, hard)</option>
                 <option value="ellaberinto">"El Laberinto de los Espíritus" by Carlos Ruiz Zafón (928, hard)</option>
                 <option value="eltemor">"El Temor de un Hombre Sabio" by Patrick Rothfuss (1040, hard)</option>
+                <option value="turkish" disabled>Turkish</option>
                 <option value="zaman">"Zaman Çarkı: Dönen Çark" by Murat Sönmez (320, easy)</option>
                 <option value="tuhaf">"Tuhaf Hikayeler Dükkanı" by Mehmet Berk Yaltırık (256, easy)</option>
                 <option value="biryol">"Bir Yol Hikayesi" by Hakan Bıçakcı (192, easy)</option>
@@ -200,12 +224,17 @@
           <td style="width: 500px">
             <select id="fall_three" style="width: 400px" onchange="modselector(this)">
                 <option value="unknown"></option>
+                <option value="horror" disabled>Horror</option>
                 <option value="dracula">"Dracula" by Bram Stoker (418, easy)</option>
+                <option value="theturnofthescrew">"The Turn of the Screw" by Henry James (124, easy)</option>
                 <option value="thewomaninblack">"The Woman in Black" by Susan Hill (208, easy)</option>
                 <option value="theshining">"The Shining" by Stephen King (688, medium)</option>
                 <option value="houseofleaves">"House of Leaves" by Mark Z. Danielewski (705, medium)</option>
+                <option value="americanpsycho">"American Psycho" by Bret Easton Ellis (399, medium)</option>
                 <option value="it">"IT" by Stephen King (1138, hard)</option>
                 <option value="theluminousdead">"The Luminous Dead" by Caitlin Starling (432, hard)</option>
+                <option value="theterror">"The Terror" by Dan Simmons (960, hard)</option>
+                <option value="scifi" disabled>Sci-Fi</option>
                 <option value="endersgame">"Ender's Game" by Orson Scott Card (352, easy)</option>
                 <option value="readyplayerone">"Ready Player One" by Ernest Cline (386, easy)</option>
                 <option value="themartian">"The Martian" by Andy Weir (384, easy)</option>
@@ -215,6 +244,7 @@
                 <option value="cryptonomicon">"Cryptonomicon" by Neal Stephenson (1168, hard)</option>
                 <option value="anathem">"Anathem" by Neal Stephenson (960, hard)</option>
                 <option value="thebookofthenewsun">"The Book of the New Sun" by Gene Wolfe (912, hard)</option>
+                <option value="fantasy" disabled>Fantasy</option>
                 <option value="stardust">"Stardust" by Neil Gaiman (288, easy)</option>
                 <option value="thenightcircus">"The Night Circus" by Erin Morgenstern (512, easy)</option>
                 <option value="uprooted">"Uprooted" by Naomi Novik (464, easy)</option>
@@ -224,6 +254,7 @@
                 <option value="thewayofkings">"The Way of Kings" by Brandon Sanderson (1007, hard)</option>
                 <option value="thebladeitself">"The Blade Itself" by Joe Abercrombie (519, hard)</option>
                 <option value="thefinalempire">"The Final Empire" by Michael J. Sullivan (541, hard)</option>
+                <option value="nonfic" disabled>Non-Fic</option>
                 <option value="becoming">"Becoming" by Michelle Obama (426, easy)</option>
                 <option value="theimmortallife">"The Immortal Life of Henrietta Lacks" by Rebecca Skloot (381, easy)</option>
                 <option value="mindset">“Mindset” by Carol Dweck (320, easy)</option>
@@ -233,6 +264,7 @@
                 <option value="theseven">"The 7 Habits of Highly Effective People" by Stephen R. Covey (384, hard)</option>
                 <option value="thinking">"Thinking, Fast and Slow" by Daniel Kahneman (512, hard)</option>
                 <option value="incoldblood">"In Cold Blood" by Truman Capote (343, hard)</option>
+                <option value="series" disabled>Series</option>
                 <option value="hpone">"Harry Potter and the Philosopher's Stone" by J.K. Rowling (223, easy)</option>
                 <option value="hptwo">"Harry Potter and the Chamber of Secrets" by J.K. Rowling (251, easy)</option>
                 <option value="hpthree">"Harry Potter and the Prisoner of Azkaban" by J.K. Rowling (317, easy)</option>
@@ -244,6 +276,7 @@
                 <option value="lotrone">"The Fellowship of the Ring" by J.R.R. Tolkien (398, hard)</option>
                 <option value="lotrtwo">"The Two Towers" by J.R.R. Tolkien (447, hard)</option>
                 <option value="lotrthree">"The Return of the King" by J.R.R. Tolkien (416, hard)</option>
+                <option value="french" disabled>French</option>
                 <option value="lepetit">"Le Petit Prince" by Antoine de Saint-Exupéry (96, easy)</option>
                 <option value="meursault">"The Meursault Investigation" by Kamel Daoud (144, easy)</option>
                 <option value="chateau">"Le Château des Étoiles, Tome 1: 1869, La Conquête de l'espace" by Alex Alice (64, easy)</option>
@@ -253,6 +286,7 @@
                 <option value="lesmiserables">"Les Misérables" by Victor Hugo (1900, hard)</option>
                 <option value="lahorde">"La Horde du Contrevent" by Alain Damasio (688, hard)</option>
                 <option value="lepee">"L'Épée de Vérité, Tome 1: La Première Leçon du Sorcier" by Terry Goodkind (800, hard)</option>
+                <option value="spanish" disabled>Spanish</option>
                 <option value="memorias">"Memorias de Idhún: La Resistencia" by Laura Gallego García (416, easy)</option>
                 <option value="elprincipe">"El Príncipe de la Niebla" by Carlos Ruiz Zafón (232, easy)</option>
                 <option value="pedroparamo">"Pedro Páramo" by Juan Rulfo (124, medium)</option>
@@ -261,6 +295,7 @@
                 <option value="laciudad">"La Ciudad de los Prodigios" by Eduardo Mendoza (416, hard)</option>
                 <option value="ellaberinto">"El Laberinto de los Espíritus" by Carlos Ruiz Zafón (928, hard)</option>
                 <option value="eltemor">"El Temor de un Hombre Sabio" by Patrick Rothfuss (1040, hard)</option>
+                <option value="turkish" disabled>Turkish</option>
                 <option value="zaman">"Zaman Çarkı: Dönen Çark" by Murat Sönmez (320, easy)</option>
                 <option value="tuhaf">"Tuhaf Hikayeler Dükkanı" by Mehmet Berk Yaltırık (256, easy)</option>
                 <option value="biryol">"Bir Yol Hikayesi" by Hakan Bıçakcı (192, easy)</option>
@@ -278,12 +313,17 @@
           <td style="width: 500px">
             <select id="fall_four" style="width: 400px" onchange="modselector(this)">
                 <option value="unknown"></option>
+                <option value="horror" disabled>Horror</option>
                 <option value="dracula">"Dracula" by Bram Stoker (418, easy)</option>
+                <option value="theturnofthescrew">"The Turn of the Screw" by Henry James (124, easy)</option>
                 <option value="thewomaninblack">"The Woman in Black" by Susan Hill (208, easy)</option>
                 <option value="theshining">"The Shining" by Stephen King (688, medium)</option>
                 <option value="houseofleaves">"House of Leaves" by Mark Z. Danielewski (705, medium)</option>
+                <option value="americanpsycho">"American Psycho" by Bret Easton Ellis (399, medium)</option>
                 <option value="it">"IT" by Stephen King (1138, hard)</option>
                 <option value="theluminousdead">"The Luminous Dead" by Caitlin Starling (432, hard)</option>
+                <option value="theterror">"The Terror" by Dan Simmons (960, hard)</option>
+                <option value="scifi" disabled>Sci-Fi</option>
                 <option value="endersgame">"Ender's Game" by Orson Scott Card (352, easy)</option>
                 <option value="readyplayerone">"Ready Player One" by Ernest Cline (386, easy)</option>
                 <option value="themartian">"The Martian" by Andy Weir (384, easy)</option>
@@ -293,6 +333,7 @@
                 <option value="cryptonomicon">"Cryptonomicon" by Neal Stephenson (1168, hard)</option>
                 <option value="anathem">"Anathem" by Neal Stephenson (960, hard)</option>
                 <option value="thebookofthenewsun">"The Book of the New Sun" by Gene Wolfe (912, hard)</option>
+                <option value="fantasy" disabled>Fantasy</option>
                 <option value="stardust">"Stardust" by Neil Gaiman (288, easy)</option>
                 <option value="thenightcircus">"The Night Circus" by Erin Morgenstern (512, easy)</option>
                 <option value="uprooted">"Uprooted" by Naomi Novik (464, easy)</option>
@@ -302,6 +343,7 @@
                 <option value="thewayofkings">"The Way of Kings" by Brandon Sanderson (1007, hard)</option>
                 <option value="thebladeitself">"The Blade Itself" by Joe Abercrombie (519, hard)</option>
                 <option value="thefinalempire">"The Final Empire" by Michael J. Sullivan (541, hard)</option>
+                <option value="nonfic" disabled>Non-Fic</option>
                 <option value="becoming">"Becoming" by Michelle Obama (426, easy)</option>
                 <option value="theimmortallife">"The Immortal Life of Henrietta Lacks" by Rebecca Skloot (381, easy)</option>
                 <option value="mindset">“Mindset” by Carol Dweck (320, easy)</option>
@@ -311,6 +353,7 @@
                 <option value="theseven">"The 7 Habits of Highly Effective People" by Stephen R. Covey (384, hard)</option>
                 <option value="thinking">"Thinking, Fast and Slow" by Daniel Kahneman (512, hard)</option>
                 <option value="incoldblood">"In Cold Blood" by Truman Capote (343, hard)</option>
+                <option value="series" disabled>Series</option>
                 <option value="hpone">"Harry Potter and the Philosopher's Stone" by J.K. Rowling (223, easy)</option>
                 <option value="hptwo">"Harry Potter and the Chamber of Secrets" by J.K. Rowling (251, easy)</option>
                 <option value="hpthree">"Harry Potter and the Prisoner of Azkaban" by J.K. Rowling (317, easy)</option>
@@ -322,6 +365,7 @@
                 <option value="lotrone">"The Fellowship of the Ring" by J.R.R. Tolkien (398, hard)</option>
                 <option value="lotrtwo">"The Two Towers" by J.R.R. Tolkien (447, hard)</option>
                 <option value="lotrthree">"The Return of the King" by J.R.R. Tolkien (416, hard)</option>
+                <option value="french" disabled>French</option>
                 <option value="lepetit">"Le Petit Prince" by Antoine de Saint-Exupéry (96, easy)</option>
                 <option value="meursault">"The Meursault Investigation" by Kamel Daoud (144, easy)</option>
                 <option value="chateau">"Le Château des Étoiles, Tome 1: 1869, La Conquête de l'espace" by Alex Alice (64, easy)</option>
@@ -331,6 +375,7 @@
                 <option value="lesmiserables">"Les Misérables" by Victor Hugo (1900, hard)</option>
                 <option value="lahorde">"La Horde du Contrevent" by Alain Damasio (688, hard)</option>
                 <option value="lepee">"L'Épée de Vérité, Tome 1: La Première Leçon du Sorcier" by Terry Goodkind (800, hard)</option>
+                <option value="spanish" disabled>Spanish</option>
                 <option value="memorias">"Memorias de Idhún: La Resistencia" by Laura Gallego García (416, easy)</option>
                 <option value="elprincipe">"El Príncipe de la Niebla" by Carlos Ruiz Zafón (232, easy)</option>
                 <option value="pedroparamo">"Pedro Páramo" by Juan Rulfo (124, medium)</option>
@@ -339,6 +384,7 @@
                 <option value="laciudad">"La Ciudad de los Prodigios" by Eduardo Mendoza (416, hard)</option>
                 <option value="ellaberinto">"El Laberinto de los Espíritus" by Carlos Ruiz Zafón (928, hard)</option>
                 <option value="eltemor">"El Temor de un Hombre Sabio" by Patrick Rothfuss (1040, hard)</option>
+                <option value="turkish" disabled>Turkish</option>
                 <option value="zaman">"Zaman Çarkı: Dönen Çark" by Murat Sönmez (320, easy)</option>
                 <option value="tuhaf">"Tuhaf Hikayeler Dükkanı" by Mehmet Berk Yaltırık (256, easy)</option>
                 <option value="biryol">"Bir Yol Hikayesi" by Hakan Bıçakcı (192, easy)</option>
@@ -360,12 +406,17 @@
           <td style="width: 500px">
             <select id="fall_five" style="width: 400px" onchange="modselector(this)">
                 <option value="unknown"></option>
+                <option value="horror" disabled>Horror</option>
                 <option value="dracula">"Dracula" by Bram Stoker (418, easy)</option>
+                <option value="theturnofthescrew">"The Turn of the Screw" by Henry James (124, easy)</option>
                 <option value="thewomaninblack">"The Woman in Black" by Susan Hill (208, easy)</option>
                 <option value="theshining">"The Shining" by Stephen King (688, medium)</option>
                 <option value="houseofleaves">"House of Leaves" by Mark Z. Danielewski (705, medium)</option>
+                <option value="americanpsycho">"American Psycho" by Bret Easton Ellis (399, medium)</option>
                 <option value="it">"IT" by Stephen King (1138, hard)</option>
                 <option value="theluminousdead">"The Luminous Dead" by Caitlin Starling (432, hard)</option>
+                <option value="theterror">"The Terror" by Dan Simmons (960, hard)</option>
+                <option value="scifi" disabled>Sci-Fi</option>
                 <option value="endersgame">"Ender's Game" by Orson Scott Card (352, easy)</option>
                 <option value="readyplayerone">"Ready Player One" by Ernest Cline (386, easy)</option>
                 <option value="themartian">"The Martian" by Andy Weir (384, easy)</option>
@@ -375,6 +426,7 @@
                 <option value="cryptonomicon">"Cryptonomicon" by Neal Stephenson (1168, hard)</option>
                 <option value="anathem">"Anathem" by Neal Stephenson (960, hard)</option>
                 <option value="thebookofthenewsun">"The Book of the New Sun" by Gene Wolfe (912, hard)</option>
+                <option value="fantasy" disabled>Fantasy</option>
                 <option value="stardust">"Stardust" by Neil Gaiman (288, easy)</option>
                 <option value="thenightcircus">"The Night Circus" by Erin Morgenstern (512, easy)</option>
                 <option value="uprooted">"Uprooted" by Naomi Novik (464, easy)</option>
@@ -384,6 +436,7 @@
                 <option value="thewayofkings">"The Way of Kings" by Brandon Sanderson (1007, hard)</option>
                 <option value="thebladeitself">"The Blade Itself" by Joe Abercrombie (519, hard)</option>
                 <option value="thefinalempire">"The Final Empire" by Michael J. Sullivan (541, hard)</option>
+                <option value="nonfic" disabled>Non-Fic</option>
                 <option value="becoming">"Becoming" by Michelle Obama (426, easy)</option>
                 <option value="theimmortallife">"The Immortal Life of Henrietta Lacks" by Rebecca Skloot (381, easy)</option>
                 <option value="mindset">“Mindset” by Carol Dweck (320, easy)</option>
@@ -393,6 +446,7 @@
                 <option value="theseven">"The 7 Habits of Highly Effective People" by Stephen R. Covey (384, hard)</option>
                 <option value="thinking">"Thinking, Fast and Slow" by Daniel Kahneman (512, hard)</option>
                 <option value="incoldblood">"In Cold Blood" by Truman Capote (343, hard)</option>
+                <option value="series" disabled>Series</option>
                 <option value="hpone">"Harry Potter and the Philosopher's Stone" by J.K. Rowling (223, easy)</option>
                 <option value="hptwo">"Harry Potter and the Chamber of Secrets" by J.K. Rowling (251, easy)</option>
                 <option value="hpthree">"Harry Potter and the Prisoner of Azkaban" by J.K. Rowling (317, easy)</option>
@@ -404,6 +458,7 @@
                 <option value="lotrone">"The Fellowship of the Ring" by J.R.R. Tolkien (398, hard)</option>
                 <option value="lotrtwo">"The Two Towers" by J.R.R. Tolkien (447, hard)</option>
                 <option value="lotrthree">"The Return of the King" by J.R.R. Tolkien (416, hard)</option>
+                <option value="french" disabled>French</option>
                 <option value="lepetit">"Le Petit Prince" by Antoine de Saint-Exupéry (96, easy)</option>
                 <option value="meursault">"The Meursault Investigation" by Kamel Daoud (144, easy)</option>
                 <option value="chateau">"Le Château des Étoiles, Tome 1: 1869, La Conquête de l'espace" by Alex Alice (64, easy)</option>
@@ -413,8 +468,8 @@
                 <option value="lesmiserables">"Les Misérables" by Victor Hugo (1900, hard)</option>
                 <option value="lahorde">"La Horde du Contrevent" by Alain Damasio (688, hard)</option>
                 <option value="lepee">"L'Épée de Vérité, Tome 1: La Première Leçon du Sorcier" by Terry Goodkind (800, hard)</option>
+                <option value="spanish" disabled>Spanish</option>
                 <option value="memorias">"Memorias de Idhún: La Resistencia" by Laura Gallego García (416, easy)</option>
-                
                 <option value="elprincipe">"El Príncipe de la Niebla" by Carlos Ruiz Zafón (232, easy)</option>
                 <option value="pedroparamo">"Pedro Páramo" by Juan Rulfo (124, medium)</option>
                 <option value="laslagrimas">"Las Lágrimas de Shiva" by César Mallorquí (320, medium)</option>
@@ -422,85 +477,7 @@
                 <option value="laciudad">"La Ciudad de los Prodigios" by Eduardo Mendoza (416, hard)</option>
                 <option value="ellaberinto">"El Laberinto de los Espíritus" by Carlos Ruiz Zafón (928, hard)</option>
                 <option value="eltemor">"El Temor de un Hombre Sabio" by Patrick Rothfuss (1040, hard)</option>
-                <option value="zaman">"Zaman Çarkı: Dönen Çark" by Murat Sönmez (320, easy)</option>
-                <option value="tuhaf">"Tuhaf Hikayeler Dükkanı" by Mehmet Berk Yaltırık (256, easy)</option>
-                <option value="biryol">"Bir Yol Hikayesi" by Hakan Bıçakcı (192, easy)</option>
-                <option value="felsefe">"Felsefe Sözlüğü" by Ercüment Aytac (592, medium)</option>
-                <option value="sisvegece">"Sis ve Gece" by Ahmet Ümit (464, medium)</option>
-                <option value="karkokusu">"Kar Kokusu" by Hasan Ali Toptaş (480, medium)</option>
-                <option value="istanbul">"İstanbul Hatırası" by Ahmet Ümit (896, hard)</option>
-                <option value="kurk">"Kürk Mantolu Madonna" by Sabahattin Ali (176, hard)</option>
-                <option value="ask">"Aşk" by Elif Şafak (736, hard)</option>
-            </select>
-          </td>
-          <td>
-          6:
-          </td>
-          <td style="width: 500px">
-            <select id="fall_six" style="width: 400px" onchange="modselector(this)">
-                <option value="unknown"></option>
-                <option value="dracula">"Dracula" by Bram Stoker (418, easy)</option>
-                <option value="thewomaninblack">"The Woman in Black" by Susan Hill (208, easy)</option>
-                <option value="theshining">"The Shining" by Stephen King (688, medium)</option>
-                <option value="houseofleaves">"House of Leaves" by Mark Z. Danielewski (705, medium)</option>
-                <option value="it">"IT" by Stephen King (1138, hard)</option>
-                <option value="theluminousdead">"The Luminous Dead" by Caitlin Starling (432, hard)</option>
-                <option value="endersgame">"Ender's Game" by Orson Scott Card (352, easy)</option>
-                <option value="readyplayerone">"Ready Player One" by Ernest Cline (386, easy)</option>
-                <option value="themartian">"The Martian" by Andy Weir (384, easy)</option>
-                <option value="snowcrash">"Snow Crash" by Neal Stephenson (470, medium)</option>
-                <option value="hyperion">"Hyperion" by Dan Simmons (482, medium)</option>
-                <option value="thelefthand">"The Left Hand of Darkness" by Ursula K. Le Guin (304, medium)</option>
-                <option value="cryptonomicon">"Cryptonomicon" by Neal Stephenson (1168, hard)</option>
-                <option value="anathem">"Anathem" by Neal Stephenson (960, hard)</option>
-                <option value="thebookofthenewsun">"The Book of the New Sun" by Gene Wolfe (912, hard)</option>
-                <option value="stardust">"Stardust" by Neil Gaiman (288, easy)</option>
-                <option value="thenightcircus">"The Night Circus" by Erin Morgenstern (512, easy)</option>
-                <option value="uprooted">"Uprooted" by Naomi Novik (464, easy)</option>
-                <option value="thenameofthewind">"The Name of the Wind" by Patrick Rothfuss (662, medium)</option>
-                <option value="sabriel">"Sabriel" by Garth Nix (491, medium)</option>
-                <option value="graceling">"Graceling" by Kristin Cashore (471, medium)</option>
-                <option value="thewayofkings">"The Way of Kings" by Brandon Sanderson (1007, hard)</option>
-                <option value="thebladeitself">"The Blade Itself" by Joe Abercrombie (519, hard)</option>
-                <option value="thefinalempire">"The Final Empire" by Michael J. Sullivan (541, hard)</option>
-                <option value="becoming">"Becoming" by Michelle Obama (426, easy)</option>
-                <option value="theimmortallife">"The Immortal Life of Henrietta Lacks" by Rebecca Skloot (381, easy)</option>
-                <option value="mindset">“Mindset” by Carol Dweck (320, easy)</option>
-                <option value="educated">"Educated" by Tara Westover (334, medium)</option>
-                <option value="thediary">"The Diary of a Young Girl" by Anne Frank (352, medium)</option>
-                <option value="thegene">"The Gene: An Intimate History" by Siddhartha Mukherjee (608, medium)</option>
-                <option value="theseven">"The 7 Habits of Highly Effective People" by Stephen R. Covey (384, hard)</option>
-                <option value="thinking">"Thinking, Fast and Slow" by Daniel Kahneman (512, hard)</option>
-                <option value="incoldblood">"In Cold Blood" by Truman Capote (343, hard)</option>
-                <option value="hpone">"Harry Potter and the Philosopher's Stone" by J.K. Rowling (223, easy)</option>
-                <option value="hptwo">"Harry Potter and the Chamber of Secrets" by J.K. Rowling (251, easy)</option>
-                <option value="hpthree">"Harry Potter and the Prisoner of Azkaban" by J.K. Rowling (317, easy)</option>
-                <option value="hpfour">"Harry Potter and the Goblet of Fire" by J.K. Rowling (636, medium)</option>
-                <option value="hpfive">"Harry Potter and the Order of the Phoenix" by J.K. Rowling (766, medium)</option>
-                <option value="hpsix">"Harry Potter and the Half-Blood Prince" by J.K. Rowling (607, medium)</option>
-                <option value="hpseven">"Harry Potter and the Deathly Hallows" by J.K. Rowling (607, medium)</option>
-                <option value="hobbit">"The Hobbit, or There and Back Again" by J.R.R. Tolkien (310, hard)</option>
-                <option value="lotrone">"The Fellowship of the Ring" by J.R.R. Tolkien (398, hard)</option>
-                <option value="lotrtwo">"The Two Towers" by J.R.R. Tolkien (447, hard)</option>
-                <option value="lotrthree">"The Return of the King" by J.R.R. Tolkien (416, hard)</option>
-                <option value="lepetit">"Le Petit Prince" by Antoine de Saint-Exupéry (96, easy)</option>
-                <option value="meursault">"The Meursault Investigation" by Kamel Daoud (144, easy)</option>
-                <option value="chateau">"Le Château des Étoiles, Tome 1: 1869, La Conquête de l'espace" by Alex Alice (64, easy)</option>
-                <option value="laquete">"La Quête d'Ewilan: D'un monde à l'autre" by Pierre Bottero (288, medium)</option>
-                <option value="lapasse">"La Passe-Miroir, Tome 1: Les Fiancés de l'Hiver" by Christelle Dabos (528, medium)</option>
-                <option value="lesaventuriers">"Les Aventuriers de la Mer, Tome 1: Le Vaisseau Magique" by Robin Hobb (416, medium)</option>
-                <option value="lesmiserables">"Les Misérables" by Victor Hugo (1900, hard)</option>
-                <option value="lahorde">"La Horde du Contrevent" by Alain Damasio (688, hard)</option>
-                <option value="lepee">"L'Épée de Vérité, Tome 1: La Première Leçon du Sorcier" by Terry Goodkind (800, hard)</option>
-                <option value="memorias">"Memorias de Idhún: La Resistencia" by Laura Gallego García (416, easy)</option>
-                
-                <option value="elprincipe">"El Príncipe de la Niebla" by Carlos Ruiz Zafón (232, easy)</option>
-                <option value="pedroparamo">"Pedro Páramo" by Juan Rulfo (124, medium)</option>
-                <option value="laslagrimas">"Las Lágrimas de Shiva" by César Mallorquí (320, medium)</option>
-                <option value="cronicas">"Crónicas de la Torre: El Valle de los Lobos" by Laura Gallego García (304, medium)</option>
-                <option value="laciudad">"La Ciudad de los Prodigios" by Eduardo Mendoza (416, hard)</option>
-                <option value="ellaberinto">"El Laberinto de los Espíritus" by Carlos Ruiz Zafón (928, hard)</option>
-                <option value="eltemor">"El Temor de un Hombre Sabio" by Patrick Rothfuss (1040, hard)</option>
+                <option value="turkish" disabled>Turkish</option>
                 <option value="zaman">"Zaman Çarkı: Dönen Çark" by Murat Sönmez (320, easy)</option>
                 <option value="tuhaf">"Tuhaf Hikayeler Dükkanı" by Mehmet Berk Yaltırık (256, easy)</option>
                 <option value="biryol">"Bir Yol Hikayesi" by Hakan Bıçakcı (192, easy)</option>
@@ -512,22 +489,23 @@
                 <option value="ask">"Aşk" by Elif Şafak (736, hard)</option>
             </select>
           </td>          
-        </tr>
-        <tr>
           <td>
-          </td>
-          <td>
-          7:
+          6:
           </td>
           <td style="width: 500px">
-            <select id="fall_seven" style="width: 400px" onchange="modselector(this)">
+            <select id="fall_six" style="width: 400px" onchange="modselector(this)">
                 <option value="unknown"></option>
+                <option value="horror" disabled>Horror</option>
                 <option value="dracula">"Dracula" by Bram Stoker (418, easy)</option>
+                <option value="theturnofthescrew">"The Turn of the Screw" by Henry James (124, easy)</option>
                 <option value="thewomaninblack">"The Woman in Black" by Susan Hill (208, easy)</option>
                 <option value="theshining">"The Shining" by Stephen King (688, medium)</option>
                 <option value="houseofleaves">"House of Leaves" by Mark Z. Danielewski (705, medium)</option>
+                <option value="americanpsycho">"American Psycho" by Bret Easton Ellis (399, medium)</option>
                 <option value="it">"IT" by Stephen King (1138, hard)</option>
                 <option value="theluminousdead">"The Luminous Dead" by Caitlin Starling (432, hard)</option>
+                <option value="theterror">"The Terror" by Dan Simmons (960, hard)</option>
+                <option value="scifi" disabled>Sci-Fi</option>
                 <option value="endersgame">"Ender's Game" by Orson Scott Card (352, easy)</option>
                 <option value="readyplayerone">"Ready Player One" by Ernest Cline (386, easy)</option>
                 <option value="themartian">"The Martian" by Andy Weir (384, easy)</option>
@@ -537,6 +515,7 @@
                 <option value="cryptonomicon">"Cryptonomicon" by Neal Stephenson (1168, hard)</option>
                 <option value="anathem">"Anathem" by Neal Stephenson (960, hard)</option>
                 <option value="thebookofthenewsun">"The Book of the New Sun" by Gene Wolfe (912, hard)</option>
+                <option value="fantasy" disabled>Fantasy</option>
                 <option value="stardust">"Stardust" by Neil Gaiman (288, easy)</option>
                 <option value="thenightcircus">"The Night Circus" by Erin Morgenstern (512, easy)</option>
                 <option value="uprooted">"Uprooted" by Naomi Novik (464, easy)</option>
@@ -546,6 +525,7 @@
                 <option value="thewayofkings">"The Way of Kings" by Brandon Sanderson (1007, hard)</option>
                 <option value="thebladeitself">"The Blade Itself" by Joe Abercrombie (519, hard)</option>
                 <option value="thefinalempire">"The Final Empire" by Michael J. Sullivan (541, hard)</option>
+                <option value="nonfic" disabled>Non-Fic</option>
                 <option value="becoming">"Becoming" by Michelle Obama (426, easy)</option>
                 <option value="theimmortallife">"The Immortal Life of Henrietta Lacks" by Rebecca Skloot (381, easy)</option>
                 <option value="mindset">“Mindset” by Carol Dweck (320, easy)</option>
@@ -555,6 +535,7 @@
                 <option value="theseven">"The 7 Habits of Highly Effective People" by Stephen R. Covey (384, hard)</option>
                 <option value="thinking">"Thinking, Fast and Slow" by Daniel Kahneman (512, hard)</option>
                 <option value="incoldblood">"In Cold Blood" by Truman Capote (343, hard)</option>
+                <option value="series" disabled>Series</option>
                 <option value="hpone">"Harry Potter and the Philosopher's Stone" by J.K. Rowling (223, easy)</option>
                 <option value="hptwo">"Harry Potter and the Chamber of Secrets" by J.K. Rowling (251, easy)</option>
                 <option value="hpthree">"Harry Potter and the Prisoner of Azkaban" by J.K. Rowling (317, easy)</option>
@@ -566,6 +547,7 @@
                 <option value="lotrone">"The Fellowship of the Ring" by J.R.R. Tolkien (398, hard)</option>
                 <option value="lotrtwo">"The Two Towers" by J.R.R. Tolkien (447, hard)</option>
                 <option value="lotrthree">"The Return of the King" by J.R.R. Tolkien (416, hard)</option>
+                <option value="french" disabled>French</option>
                 <option value="lepetit">"Le Petit Prince" by Antoine de Saint-Exupéry (96, easy)</option>
                 <option value="meursault">"The Meursault Investigation" by Kamel Daoud (144, easy)</option>
                 <option value="chateau">"Le Château des Étoiles, Tome 1: 1869, La Conquête de l'espace" by Alex Alice (64, easy)</option>
@@ -575,8 +557,8 @@
                 <option value="lesmiserables">"Les Misérables" by Victor Hugo (1900, hard)</option>
                 <option value="lahorde">"La Horde du Contrevent" by Alain Damasio (688, hard)</option>
                 <option value="lepee">"L'Épée de Vérité, Tome 1: La Première Leçon du Sorcier" by Terry Goodkind (800, hard)</option>
+                <option value="spanish" disabled>Spanish</option>
                 <option value="memorias">"Memorias de Idhún: La Resistencia" by Laura Gallego García (416, easy)</option>
-                
                 <option value="elprincipe">"El Príncipe de la Niebla" by Carlos Ruiz Zafón (232, easy)</option>
                 <option value="pedroparamo">"Pedro Páramo" by Juan Rulfo (124, medium)</option>
                 <option value="laslagrimas">"Las Lágrimas de Shiva" by César Mallorquí (320, medium)</option>
@@ -584,6 +566,100 @@
                 <option value="laciudad">"La Ciudad de los Prodigios" by Eduardo Mendoza (416, hard)</option>
                 <option value="ellaberinto">"El Laberinto de los Espíritus" by Carlos Ruiz Zafón (928, hard)</option>
                 <option value="eltemor">"El Temor de un Hombre Sabio" by Patrick Rothfuss (1040, hard)</option>
+                <option value="turkish" disabled>Turkish</option>
+                <option value="zaman">"Zaman Çarkı: Dönen Çark" by Murat Sönmez (320, easy)</option>
+                <option value="tuhaf">"Tuhaf Hikayeler Dükkanı" by Mehmet Berk Yaltırık (256, easy)</option>
+                <option value="biryol">"Bir Yol Hikayesi" by Hakan Bıçakcı (192, easy)</option>
+                <option value="felsefe">"Felsefe Sözlüğü" by Ercüment Aytac (592, medium)</option>
+                <option value="sisvegece">"Sis ve Gece" by Ahmet Ümit (464, medium)</option>
+                <option value="karkokusu">"Kar Kokusu" by Hasan Ali Toptaş (480, medium)</option>
+                <option value="istanbul">"İstanbul Hatırası" by Ahmet Ümit (896, hard)</option>
+                <option value="kurk">"Kürk Mantolu Madonna" by Sabahattin Ali (176, hard)</option>
+                <option value="ask">"Aşk" by Elif Şafak (736, hard)</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>
+          </td>
+          <td>
+          7:
+          </td>
+          <td style="width: 500px">
+            <select id="fall_seven" style="width: 400px" onchange="modselector(this)">
+                <option value="unknown"></option>
+                <option value="horror" disabled>Horror</option>
+                <option value="dracula">"Dracula" by Bram Stoker (418, easy)</option>
+                <option value="theturnofthescrew">"The Turn of the Screw" by Henry James (124, easy)</option>
+                <option value="thewomaninblack">"The Woman in Black" by Susan Hill (208, easy)</option>
+                <option value="theshining">"The Shining" by Stephen King (688, medium)</option>
+                <option value="houseofleaves">"House of Leaves" by Mark Z. Danielewski (705, medium)</option>
+                <option value="americanpsycho">"American Psycho" by Bret Easton Ellis (399, medium)</option>
+                <option value="it">"IT" by Stephen King (1138, hard)</option>
+                <option value="theluminousdead">"The Luminous Dead" by Caitlin Starling (432, hard)</option>
+                <option value="theterror">"The Terror" by Dan Simmons (960, hard)</option>
+                <option value="scifi" disabled>Sci-Fi</option>
+                <option value="endersgame">"Ender's Game" by Orson Scott Card (352, easy)</option>
+                <option value="readyplayerone">"Ready Player One" by Ernest Cline (386, easy)</option>
+                <option value="themartian">"The Martian" by Andy Weir (384, easy)</option>
+                <option value="snowcrash">"Snow Crash" by Neal Stephenson (470, medium)</option>
+                <option value="hyperion">"Hyperion" by Dan Simmons (482, medium)</option>
+                <option value="thelefthand">"The Left Hand of Darkness" by Ursula K. Le Guin (304, medium)</option>
+                <option value="cryptonomicon">"Cryptonomicon" by Neal Stephenson (1168, hard)</option>
+                <option value="anathem">"Anathem" by Neal Stephenson (960, hard)</option>
+                <option value="thebookofthenewsun">"The Book of the New Sun" by Gene Wolfe (912, hard)</option>
+                <option value="fantasy" disabled>Fantasy</option>
+                <option value="stardust">"Stardust" by Neil Gaiman (288, easy)</option>
+                <option value="thenightcircus">"The Night Circus" by Erin Morgenstern (512, easy)</option>
+                <option value="uprooted">"Uprooted" by Naomi Novik (464, easy)</option>
+                <option value="thenameofthewind">"The Name of the Wind" by Patrick Rothfuss (662, medium)</option>
+                <option value="sabriel">"Sabriel" by Garth Nix (491, medium)</option>
+                <option value="graceling">"Graceling" by Kristin Cashore (471, medium)</option>
+                <option value="thewayofkings">"The Way of Kings" by Brandon Sanderson (1007, hard)</option>
+                <option value="thebladeitself">"The Blade Itself" by Joe Abercrombie (519, hard)</option>
+                <option value="thefinalempire">"The Final Empire" by Michael J. Sullivan (541, hard)</option>
+                <option value="nonfic" disabled>Non-Fic</option>
+                <option value="becoming">"Becoming" by Michelle Obama (426, easy)</option>
+                <option value="theimmortallife">"The Immortal Life of Henrietta Lacks" by Rebecca Skloot (381, easy)</option>
+                <option value="mindset">“Mindset” by Carol Dweck (320, easy)</option>
+                <option value="educated">"Educated" by Tara Westover (334, medium)</option>
+                <option value="thediary">"The Diary of a Young Girl" by Anne Frank (352, medium)</option>
+                <option value="thegene">"The Gene: An Intimate History" by Siddhartha Mukherjee (608, medium)</option>
+                <option value="theseven">"The 7 Habits of Highly Effective People" by Stephen R. Covey (384, hard)</option>
+                <option value="thinking">"Thinking, Fast and Slow" by Daniel Kahneman (512, hard)</option>
+                <option value="incoldblood">"In Cold Blood" by Truman Capote (343, hard)</option>
+                <option value="series" disabled>Series</option>
+                <option value="hpone">"Harry Potter and the Philosopher's Stone" by J.K. Rowling (223, easy)</option>
+                <option value="hptwo">"Harry Potter and the Chamber of Secrets" by J.K. Rowling (251, easy)</option>
+                <option value="hpthree">"Harry Potter and the Prisoner of Azkaban" by J.K. Rowling (317, easy)</option>
+                <option value="hpfour">"Harry Potter and the Goblet of Fire" by J.K. Rowling (636, medium)</option>
+                <option value="hpfive">"Harry Potter and the Order of the Phoenix" by J.K. Rowling (766, medium)</option>
+                <option value="hpsix">"Harry Potter and the Half-Blood Prince" by J.K. Rowling (607, medium)</option>
+                <option value="hpseven">"Harry Potter and the Deathly Hallows" by J.K. Rowling (607, medium)</option>
+                <option value="hobbit">"The Hobbit, or There and Back Again" by J.R.R. Tolkien (310, hard)</option>
+                <option value="lotrone">"The Fellowship of the Ring" by J.R.R. Tolkien (398, hard)</option>
+                <option value="lotrtwo">"The Two Towers" by J.R.R. Tolkien (447, hard)</option>
+                <option value="lotrthree">"The Return of the King" by J.R.R. Tolkien (416, hard)</option>
+                <option value="french" disabled>French</option>
+                <option value="lepetit">"Le Petit Prince" by Antoine de Saint-Exupéry (96, easy)</option>
+                <option value="meursault">"The Meursault Investigation" by Kamel Daoud (144, easy)</option>
+                <option value="chateau">"Le Château des Étoiles, Tome 1: 1869, La Conquête de l'espace" by Alex Alice (64, easy)</option>
+                <option value="laquete">"La Quête d'Ewilan: D'un monde à l'autre" by Pierre Bottero (288, medium)</option>
+                <option value="lapasse">"La Passe-Miroir, Tome 1: Les Fiancés de l'Hiver" by Christelle Dabos (528, medium)</option>
+                <option value="lesaventuriers">"Les Aventuriers de la Mer, Tome 1: Le Vaisseau Magique" by Robin Hobb (416, medium)</option>
+                <option value="lesmiserables">"Les Misérables" by Victor Hugo (1900, hard)</option>
+                <option value="lahorde">"La Horde du Contrevent" by Alain Damasio (688, hard)</option>
+                <option value="lepee">"L'Épée de Vérité, Tome 1: La Première Leçon du Sorcier" by Terry Goodkind (800, hard)</option>
+                <option value="spanish" disabled>Spanish</option>
+                <option value="memorias">"Memorias de Idhún: La Resistencia" by Laura Gallego García (416, easy)</option>
+                <option value="elprincipe">"El Príncipe de la Niebla" by Carlos Ruiz Zafón (232, easy)</option>
+                <option value="pedroparamo">"Pedro Páramo" by Juan Rulfo (124, medium)</option>
+                <option value="laslagrimas">"Las Lágrimas de Shiva" by César Mallorquí (320, medium)</option>
+                <option value="cronicas">"Crónicas de la Torre: El Valle de los Lobos" by Laura Gallego García (304, medium)</option>
+                <option value="laciudad">"La Ciudad de los Prodigios" by Eduardo Mendoza (416, hard)</option>
+                <option value="ellaberinto">"El Laberinto de los Espíritus" by Carlos Ruiz Zafón (928, hard)</option>
+                <option value="eltemor">"El Temor de un Hombre Sabio" by Patrick Rothfuss (1040, hard)</option>
+                <option value="turkish" disabled>Turkish</option>
                 <option value="zaman">"Zaman Çarkı: Dönen Çark" by Murat Sönmez (320, easy)</option>
                 <option value="tuhaf">"Tuhaf Hikayeler Dükkanı" by Mehmet Berk Yaltırık (256, easy)</option>
                 <option value="biryol">"Bir Yol Hikayesi" by Hakan Bıçakcı (192, easy)</option>
@@ -601,12 +677,17 @@
           <td style="width: 500px">
             <select id="fall_eight" style="width: 400px" onchange="modselector(this)">
                 <option value="unknown"></option>
+                <option value="horror" disabled>Horror</option>
                 <option value="dracula">"Dracula" by Bram Stoker (418, easy)</option>
+                <option value="theturnofthescrew">"The Turn of the Screw" by Henry James (124, easy)</option>
                 <option value="thewomaninblack">"The Woman in Black" by Susan Hill (208, easy)</option>
                 <option value="theshining">"The Shining" by Stephen King (688, medium)</option>
                 <option value="houseofleaves">"House of Leaves" by Mark Z. Danielewski (705, medium)</option>
+                <option value="americanpsycho">"American Psycho" by Bret Easton Ellis (399, medium)</option>
                 <option value="it">"IT" by Stephen King (1138, hard)</option>
                 <option value="theluminousdead">"The Luminous Dead" by Caitlin Starling (432, hard)</option>
+                <option value="theterror">"The Terror" by Dan Simmons (960, hard)</option>
+                <option value="scifi" disabled>Sci-Fi</option>
                 <option value="endersgame">"Ender's Game" by Orson Scott Card (352, easy)</option>
                 <option value="readyplayerone">"Ready Player One" by Ernest Cline (386, easy)</option>
                 <option value="themartian">"The Martian" by Andy Weir (384, easy)</option>
@@ -616,6 +697,7 @@
                 <option value="cryptonomicon">"Cryptonomicon" by Neal Stephenson (1168, hard)</option>
                 <option value="anathem">"Anathem" by Neal Stephenson (960, hard)</option>
                 <option value="thebookofthenewsun">"The Book of the New Sun" by Gene Wolfe (912, hard)</option>
+                <option value="fantasy" disabled>Fantasy</option>
                 <option value="stardust">"Stardust" by Neil Gaiman (288, easy)</option>
                 <option value="thenightcircus">"The Night Circus" by Erin Morgenstern (512, easy)</option>
                 <option value="uprooted">"Uprooted" by Naomi Novik (464, easy)</option>
@@ -625,6 +707,7 @@
                 <option value="thewayofkings">"The Way of Kings" by Brandon Sanderson (1007, hard)</option>
                 <option value="thebladeitself">"The Blade Itself" by Joe Abercrombie (519, hard)</option>
                 <option value="thefinalempire">"The Final Empire" by Michael J. Sullivan (541, hard)</option>
+                <option value="nonfic" disabled>Non-Fic</option>
                 <option value="becoming">"Becoming" by Michelle Obama (426, easy)</option>
                 <option value="theimmortallife">"The Immortal Life of Henrietta Lacks" by Rebecca Skloot (381, easy)</option>
                 <option value="mindset">“Mindset” by Carol Dweck (320, easy)</option>
@@ -634,6 +717,7 @@
                 <option value="theseven">"The 7 Habits of Highly Effective People" by Stephen R. Covey (384, hard)</option>
                 <option value="thinking">"Thinking, Fast and Slow" by Daniel Kahneman (512, hard)</option>
                 <option value="incoldblood">"In Cold Blood" by Truman Capote (343, hard)</option>
+                <option value="series" disabled>Series</option>
                 <option value="hpone">"Harry Potter and the Philosopher's Stone" by J.K. Rowling (223, easy)</option>
                 <option value="hptwo">"Harry Potter and the Chamber of Secrets" by J.K. Rowling (251, easy)</option>
                 <option value="hpthree">"Harry Potter and the Prisoner of Azkaban" by J.K. Rowling (317, easy)</option>
@@ -645,6 +729,7 @@
                 <option value="lotrone">"The Fellowship of the Ring" by J.R.R. Tolkien (398, hard)</option>
                 <option value="lotrtwo">"The Two Towers" by J.R.R. Tolkien (447, hard)</option>
                 <option value="lotrthree">"The Return of the King" by J.R.R. Tolkien (416, hard)</option>
+                <option value="french" disabled>French</option>
                 <option value="lepetit">"Le Petit Prince" by Antoine de Saint-Exupéry (96, easy)</option>
                 <option value="meursault">"The Meursault Investigation" by Kamel Daoud (144, easy)</option>
                 <option value="chateau">"Le Château des Étoiles, Tome 1: 1869, La Conquête de l'espace" by Alex Alice (64, easy)</option>
@@ -654,8 +739,8 @@
                 <option value="lesmiserables">"Les Misérables" by Victor Hugo (1900, hard)</option>
                 <option value="lahorde">"La Horde du Contrevent" by Alain Damasio (688, hard)</option>
                 <option value="lepee">"L'Épée de Vérité, Tome 1: La Première Leçon du Sorcier" by Terry Goodkind (800, hard)</option>
+                <option value="spanish" disabled>Spanish</option>
                 <option value="memorias">"Memorias de Idhún: La Resistencia" by Laura Gallego García (416, easy)</option>
-                
                 <option value="elprincipe">"El Príncipe de la Niebla" by Carlos Ruiz Zafón (232, easy)</option>
                 <option value="pedroparamo">"Pedro Páramo" by Juan Rulfo (124, medium)</option>
                 <option value="laslagrimas">"Las Lágrimas de Shiva" by César Mallorquí (320, medium)</option>
@@ -663,6 +748,7 @@
                 <option value="laciudad">"La Ciudad de los Prodigios" by Eduardo Mendoza (416, hard)</option>
                 <option value="ellaberinto">"El Laberinto de los Espíritus" by Carlos Ruiz Zafón (928, hard)</option>
                 <option value="eltemor">"El Temor de un Hombre Sabio" by Patrick Rothfuss (1040, hard)</option>
+                <option value="turkish" disabled>Turkish</option>
                 <option value="zaman">"Zaman Çarkı: Dönen Çark" by Murat Sönmez (320, easy)</option>
                 <option value="tuhaf">"Tuhaf Hikayeler Dükkanı" by Mehmet Berk Yaltırık (256, easy)</option>
                 <option value="biryol">"Bir Yol Hikayesi" by Hakan Bıçakcı (192, easy)</option>
@@ -677,10 +763,12 @@
         </tr>
         <tr style="height: 15px">
         </tr>
+
+
         
         <!-- WINTER -->
         <tr>
-          <td style="width: 80px; text-align: left; font-weight: bold">
+          <td style="width: 100px; text-align: left; font-weight: bold">
             WINTER
           </td>
           <td>
@@ -689,12 +777,17 @@
           <td style="width: 560px">
             <select id="winter_one" style="width: 400px" onchange="modselector(this)">
                 <option value="unknown"></option>
+                <option value="horror" disabled>Horror</option>
                 <option value="dracula">"Dracula" by Bram Stoker (418, easy)</option>
+                <option value="theturnofthescrew">"The Turn of the Screw" by Henry James (124, easy)</option>
                 <option value="thewomaninblack">"The Woman in Black" by Susan Hill (208, easy)</option>
                 <option value="theshining">"The Shining" by Stephen King (688, medium)</option>
                 <option value="houseofleaves">"House of Leaves" by Mark Z. Danielewski (705, medium)</option>
+                <option value="americanpsycho">"American Psycho" by Bret Easton Ellis (399, medium)</option>
                 <option value="it">"IT" by Stephen King (1138, hard)</option>
                 <option value="theluminousdead">"The Luminous Dead" by Caitlin Starling (432, hard)</option>
+                <option value="theterror">"The Terror" by Dan Simmons (960, hard)</option>
+                <option value="scifi" disabled>Sci-Fi</option>
                 <option value="endersgame">"Ender's Game" by Orson Scott Card (352, easy)</option>
                 <option value="readyplayerone">"Ready Player One" by Ernest Cline (386, easy)</option>
                 <option value="themartian">"The Martian" by Andy Weir (384, easy)</option>
@@ -704,6 +797,7 @@
                 <option value="cryptonomicon">"Cryptonomicon" by Neal Stephenson (1168, hard)</option>
                 <option value="anathem">"Anathem" by Neal Stephenson (960, hard)</option>
                 <option value="thebookofthenewsun">"The Book of the New Sun" by Gene Wolfe (912, hard)</option>
+                <option value="fantasy" disabled>Fantasy</option>
                 <option value="stardust">"Stardust" by Neil Gaiman (288, easy)</option>
                 <option value="thenightcircus">"The Night Circus" by Erin Morgenstern (512, easy)</option>
                 <option value="uprooted">"Uprooted" by Naomi Novik (464, easy)</option>
@@ -713,6 +807,7 @@
                 <option value="thewayofkings">"The Way of Kings" by Brandon Sanderson (1007, hard)</option>
                 <option value="thebladeitself">"The Blade Itself" by Joe Abercrombie (519, hard)</option>
                 <option value="thefinalempire">"The Final Empire" by Michael J. Sullivan (541, hard)</option>
+                <option value="nonfic" disabled>Non-Fic</option>
                 <option value="becoming">"Becoming" by Michelle Obama (426, easy)</option>
                 <option value="theimmortallife">"The Immortal Life of Henrietta Lacks" by Rebecca Skloot (381, easy)</option>
                 <option value="mindset">“Mindset” by Carol Dweck (320, easy)</option>
@@ -722,6 +817,7 @@
                 <option value="theseven">"The 7 Habits of Highly Effective People" by Stephen R. Covey (384, hard)</option>
                 <option value="thinking">"Thinking, Fast and Slow" by Daniel Kahneman (512, hard)</option>
                 <option value="incoldblood">"In Cold Blood" by Truman Capote (343, hard)</option>
+                <option value="series" disabled>Series</option>
                 <option value="hpone">"Harry Potter and the Philosopher's Stone" by J.K. Rowling (223, easy)</option>
                 <option value="hptwo">"Harry Potter and the Chamber of Secrets" by J.K. Rowling (251, easy)</option>
                 <option value="hpthree">"Harry Potter and the Prisoner of Azkaban" by J.K. Rowling (317, easy)</option>
@@ -733,6 +829,7 @@
                 <option value="lotrone">"The Fellowship of the Ring" by J.R.R. Tolkien (398, hard)</option>
                 <option value="lotrtwo">"The Two Towers" by J.R.R. Tolkien (447, hard)</option>
                 <option value="lotrthree">"The Return of the King" by J.R.R. Tolkien (416, hard)</option>
+                <option value="french" disabled>French</option>
                 <option value="lepetit">"Le Petit Prince" by Antoine de Saint-Exupéry (96, easy)</option>
                 <option value="meursault">"The Meursault Investigation" by Kamel Daoud (144, easy)</option>
                 <option value="chateau">"Le Château des Étoiles, Tome 1: 1869, La Conquête de l'espace" by Alex Alice (64, easy)</option>
@@ -742,8 +839,8 @@
                 <option value="lesmiserables">"Les Misérables" by Victor Hugo (1900, hard)</option>
                 <option value="lahorde">"La Horde du Contrevent" by Alain Damasio (688, hard)</option>
                 <option value="lepee">"L'Épée de Vérité, Tome 1: La Première Leçon du Sorcier" by Terry Goodkind (800, hard)</option>
+                <option value="spanish" disabled>Spanish</option>
                 <option value="memorias">"Memorias de Idhún: La Resistencia" by Laura Gallego García (416, easy)</option>
-                
                 <option value="elprincipe">"El Príncipe de la Niebla" by Carlos Ruiz Zafón (232, easy)</option>
                 <option value="pedroparamo">"Pedro Páramo" by Juan Rulfo (124, medium)</option>
                 <option value="laslagrimas">"Las Lágrimas de Shiva" by César Mallorquí (320, medium)</option>
@@ -751,6 +848,7 @@
                 <option value="laciudad">"La Ciudad de los Prodigios" by Eduardo Mendoza (416, hard)</option>
                 <option value="ellaberinto">"El Laberinto de los Espíritus" by Carlos Ruiz Zafón (928, hard)</option>
                 <option value="eltemor">"El Temor de un Hombre Sabio" by Patrick Rothfuss (1040, hard)</option>
+                <option value="turkish" disabled>Turkish</option>
                 <option value="zaman">"Zaman Çarkı: Dönen Çark" by Murat Sönmez (320, easy)</option>
                 <option value="tuhaf">"Tuhaf Hikayeler Dükkanı" by Mehmet Berk Yaltırık (256, easy)</option>
                 <option value="biryol">"Bir Yol Hikayesi" by Hakan Bıçakcı (192, easy)</option>
@@ -768,12 +866,17 @@
           <td style="width: 500px">
             <select id="winter_two" style="width: 400px" onchange="modselector(this)">
                 <option value="unknown"></option>
+                <option value="horror" disabled>Horror</option>
                 <option value="dracula">"Dracula" by Bram Stoker (418, easy)</option>
+                <option value="theturnofthescrew">"The Turn of the Screw" by Henry James (124, easy)</option>
                 <option value="thewomaninblack">"The Woman in Black" by Susan Hill (208, easy)</option>
                 <option value="theshining">"The Shining" by Stephen King (688, medium)</option>
                 <option value="houseofleaves">"House of Leaves" by Mark Z. Danielewski (705, medium)</option>
+                <option value="americanpsycho">"American Psycho" by Bret Easton Ellis (399, medium)</option>
                 <option value="it">"IT" by Stephen King (1138, hard)</option>
                 <option value="theluminousdead">"The Luminous Dead" by Caitlin Starling (432, hard)</option>
+                <option value="theterror">"The Terror" by Dan Simmons (960, hard)</option>
+                <option value="scifi" disabled>Sci-Fi</option>
                 <option value="endersgame">"Ender's Game" by Orson Scott Card (352, easy)</option>
                 <option value="readyplayerone">"Ready Player One" by Ernest Cline (386, easy)</option>
                 <option value="themartian">"The Martian" by Andy Weir (384, easy)</option>
@@ -783,6 +886,7 @@
                 <option value="cryptonomicon">"Cryptonomicon" by Neal Stephenson (1168, hard)</option>
                 <option value="anathem">"Anathem" by Neal Stephenson (960, hard)</option>
                 <option value="thebookofthenewsun">"The Book of the New Sun" by Gene Wolfe (912, hard)</option>
+                <option value="fantasy" disabled>Fantasy</option>
                 <option value="stardust">"Stardust" by Neil Gaiman (288, easy)</option>
                 <option value="thenightcircus">"The Night Circus" by Erin Morgenstern (512, easy)</option>
                 <option value="uprooted">"Uprooted" by Naomi Novik (464, easy)</option>
@@ -792,6 +896,7 @@
                 <option value="thewayofkings">"The Way of Kings" by Brandon Sanderson (1007, hard)</option>
                 <option value="thebladeitself">"The Blade Itself" by Joe Abercrombie (519, hard)</option>
                 <option value="thefinalempire">"The Final Empire" by Michael J. Sullivan (541, hard)</option>
+                <option value="nonfic" disabled>Non-Fic</option>
                 <option value="becoming">"Becoming" by Michelle Obama (426, easy)</option>
                 <option value="theimmortallife">"The Immortal Life of Henrietta Lacks" by Rebecca Skloot (381, easy)</option>
                 <option value="mindset">“Mindset” by Carol Dweck (320, easy)</option>
@@ -801,6 +906,7 @@
                 <option value="theseven">"The 7 Habits of Highly Effective People" by Stephen R. Covey (384, hard)</option>
                 <option value="thinking">"Thinking, Fast and Slow" by Daniel Kahneman (512, hard)</option>
                 <option value="incoldblood">"In Cold Blood" by Truman Capote (343, hard)</option>
+                <option value="series" disabled>Series</option>
                 <option value="hpone">"Harry Potter and the Philosopher's Stone" by J.K. Rowling (223, easy)</option>
                 <option value="hptwo">"Harry Potter and the Chamber of Secrets" by J.K. Rowling (251, easy)</option>
                 <option value="hpthree">"Harry Potter and the Prisoner of Azkaban" by J.K. Rowling (317, easy)</option>
@@ -812,6 +918,7 @@
                 <option value="lotrone">"The Fellowship of the Ring" by J.R.R. Tolkien (398, hard)</option>
                 <option value="lotrtwo">"The Two Towers" by J.R.R. Tolkien (447, hard)</option>
                 <option value="lotrthree">"The Return of the King" by J.R.R. Tolkien (416, hard)</option>
+                <option value="french" disabled>French</option>
                 <option value="lepetit">"Le Petit Prince" by Antoine de Saint-Exupéry (96, easy)</option>
                 <option value="meursault">"The Meursault Investigation" by Kamel Daoud (144, easy)</option>
                 <option value="chateau">"Le Château des Étoiles, Tome 1: 1869, La Conquête de l'espace" by Alex Alice (64, easy)</option>
@@ -821,8 +928,8 @@
                 <option value="lesmiserables">"Les Misérables" by Victor Hugo (1900, hard)</option>
                 <option value="lahorde">"La Horde du Contrevent" by Alain Damasio (688, hard)</option>
                 <option value="lepee">"L'Épée de Vérité, Tome 1: La Première Leçon du Sorcier" by Terry Goodkind (800, hard)</option>
+                <option value="spanish" disabled>Spanish</option>
                 <option value="memorias">"Memorias de Idhún: La Resistencia" by Laura Gallego García (416, easy)</option>
-                
                 <option value="elprincipe">"El Príncipe de la Niebla" by Carlos Ruiz Zafón (232, easy)</option>
                 <option value="pedroparamo">"Pedro Páramo" by Juan Rulfo (124, medium)</option>
                 <option value="laslagrimas">"Las Lágrimas de Shiva" by César Mallorquí (320, medium)</option>
@@ -830,6 +937,7 @@
                 <option value="laciudad">"La Ciudad de los Prodigios" by Eduardo Mendoza (416, hard)</option>
                 <option value="ellaberinto">"El Laberinto de los Espíritus" by Carlos Ruiz Zafón (928, hard)</option>
                 <option value="eltemor">"El Temor de un Hombre Sabio" by Patrick Rothfuss (1040, hard)</option>
+                <option value="turkish" disabled>Turkish</option>
                 <option value="zaman">"Zaman Çarkı: Dönen Çark" by Murat Sönmez (320, easy)</option>
                 <option value="tuhaf">"Tuhaf Hikayeler Dükkanı" by Mehmet Berk Yaltırık (256, easy)</option>
                 <option value="biryol">"Bir Yol Hikayesi" by Hakan Bıçakcı (192, easy)</option>
@@ -850,13 +958,18 @@
           </td>
           <td style="width: 500px">
             <select id="winter_three" style="width: 400px" onchange="modselector(this)">
-               <option value="unknown"></option>
-               <option value="dracula">"Dracula" by Bram Stoker (418, easy)</option>
+                <option value="unknown"></option>
+                <option value="horror" disabled>Horror</option>
+                <option value="dracula">"Dracula" by Bram Stoker (418, easy)</option>
+                <option value="theturnofthescrew">"The Turn of the Screw" by Henry James (124, easy)</option>
                 <option value="thewomaninblack">"The Woman in Black" by Susan Hill (208, easy)</option>
                 <option value="theshining">"The Shining" by Stephen King (688, medium)</option>
                 <option value="houseofleaves">"House of Leaves" by Mark Z. Danielewski (705, medium)</option>
+                <option value="americanpsycho">"American Psycho" by Bret Easton Ellis (399, medium)</option>
                 <option value="it">"IT" by Stephen King (1138, hard)</option>
                 <option value="theluminousdead">"The Luminous Dead" by Caitlin Starling (432, hard)</option>
+                <option value="theterror">"The Terror" by Dan Simmons (960, hard)</option>
+                <option value="scifi" disabled>Sci-Fi</option>
                 <option value="endersgame">"Ender's Game" by Orson Scott Card (352, easy)</option>
                 <option value="readyplayerone">"Ready Player One" by Ernest Cline (386, easy)</option>
                 <option value="themartian">"The Martian" by Andy Weir (384, easy)</option>
@@ -866,6 +979,7 @@
                 <option value="cryptonomicon">"Cryptonomicon" by Neal Stephenson (1168, hard)</option>
                 <option value="anathem">"Anathem" by Neal Stephenson (960, hard)</option>
                 <option value="thebookofthenewsun">"The Book of the New Sun" by Gene Wolfe (912, hard)</option>
+                <option value="fantasy" disabled>Fantasy</option>
                 <option value="stardust">"Stardust" by Neil Gaiman (288, easy)</option>
                 <option value="thenightcircus">"The Night Circus" by Erin Morgenstern (512, easy)</option>
                 <option value="uprooted">"Uprooted" by Naomi Novik (464, easy)</option>
@@ -875,6 +989,7 @@
                 <option value="thewayofkings">"The Way of Kings" by Brandon Sanderson (1007, hard)</option>
                 <option value="thebladeitself">"The Blade Itself" by Joe Abercrombie (519, hard)</option>
                 <option value="thefinalempire">"The Final Empire" by Michael J. Sullivan (541, hard)</option>
+                <option value="nonfic" disabled>Non-Fic</option>
                 <option value="becoming">"Becoming" by Michelle Obama (426, easy)</option>
                 <option value="theimmortallife">"The Immortal Life of Henrietta Lacks" by Rebecca Skloot (381, easy)</option>
                 <option value="mindset">“Mindset” by Carol Dweck (320, easy)</option>
@@ -884,6 +999,7 @@
                 <option value="theseven">"The 7 Habits of Highly Effective People" by Stephen R. Covey (384, hard)</option>
                 <option value="thinking">"Thinking, Fast and Slow" by Daniel Kahneman (512, hard)</option>
                 <option value="incoldblood">"In Cold Blood" by Truman Capote (343, hard)</option>
+                <option value="series" disabled>Series</option>
                 <option value="hpone">"Harry Potter and the Philosopher's Stone" by J.K. Rowling (223, easy)</option>
                 <option value="hptwo">"Harry Potter and the Chamber of Secrets" by J.K. Rowling (251, easy)</option>
                 <option value="hpthree">"Harry Potter and the Prisoner of Azkaban" by J.K. Rowling (317, easy)</option>
@@ -895,6 +1011,7 @@
                 <option value="lotrone">"The Fellowship of the Ring" by J.R.R. Tolkien (398, hard)</option>
                 <option value="lotrtwo">"The Two Towers" by J.R.R. Tolkien (447, hard)</option>
                 <option value="lotrthree">"The Return of the King" by J.R.R. Tolkien (416, hard)</option>
+                <option value="french" disabled>French</option>
                 <option value="lepetit">"Le Petit Prince" by Antoine de Saint-Exupéry (96, easy)</option>
                 <option value="meursault">"The Meursault Investigation" by Kamel Daoud (144, easy)</option>
                 <option value="chateau">"Le Château des Étoiles, Tome 1: 1869, La Conquête de l'espace" by Alex Alice (64, easy)</option>
@@ -904,8 +1021,8 @@
                 <option value="lesmiserables">"Les Misérables" by Victor Hugo (1900, hard)</option>
                 <option value="lahorde">"La Horde du Contrevent" by Alain Damasio (688, hard)</option>
                 <option value="lepee">"L'Épée de Vérité, Tome 1: La Première Leçon du Sorcier" by Terry Goodkind (800, hard)</option>
+                <option value="spanish" disabled>Spanish</option>
                 <option value="memorias">"Memorias de Idhún: La Resistencia" by Laura Gallego García (416, easy)</option>
-                
                 <option value="elprincipe">"El Príncipe de la Niebla" by Carlos Ruiz Zafón (232, easy)</option>
                 <option value="pedroparamo">"Pedro Páramo" by Juan Rulfo (124, medium)</option>
                 <option value="laslagrimas">"Las Lágrimas de Shiva" by César Mallorquí (320, medium)</option>
@@ -913,6 +1030,7 @@
                 <option value="laciudad">"La Ciudad de los Prodigios" by Eduardo Mendoza (416, hard)</option>
                 <option value="ellaberinto">"El Laberinto de los Espíritus" by Carlos Ruiz Zafón (928, hard)</option>
                 <option value="eltemor">"El Temor de un Hombre Sabio" by Patrick Rothfuss (1040, hard)</option>
+                <option value="turkish" disabled>Turkish</option>
                 <option value="zaman">"Zaman Çarkı: Dönen Çark" by Murat Sönmez (320, easy)</option>
                 <option value="tuhaf">"Tuhaf Hikayeler Dükkanı" by Mehmet Berk Yaltırık (256, easy)</option>
                 <option value="biryol">"Bir Yol Hikayesi" by Hakan Bıçakcı (192, easy)</option>
@@ -930,12 +1048,17 @@
           <td style="width: 500px">
             <select id="winter_four" style="width: 400px" onchange="modselector(this)">
                 <option value="unknown"></option>
+                <option value="horror" disabled>Horror</option>
                 <option value="dracula">"Dracula" by Bram Stoker (418, easy)</option>
+                <option value="theturnofthescrew">"The Turn of the Screw" by Henry James (124, easy)</option>
                 <option value="thewomaninblack">"The Woman in Black" by Susan Hill (208, easy)</option>
                 <option value="theshining">"The Shining" by Stephen King (688, medium)</option>
                 <option value="houseofleaves">"House of Leaves" by Mark Z. Danielewski (705, medium)</option>
+                <option value="americanpsycho">"American Psycho" by Bret Easton Ellis (399, medium)</option>
                 <option value="it">"IT" by Stephen King (1138, hard)</option>
                 <option value="theluminousdead">"The Luminous Dead" by Caitlin Starling (432, hard)</option>
+                <option value="theterror">"The Terror" by Dan Simmons (960, hard)</option>
+                <option value="scifi" disabled>Sci-Fi</option>
                 <option value="endersgame">"Ender's Game" by Orson Scott Card (352, easy)</option>
                 <option value="readyplayerone">"Ready Player One" by Ernest Cline (386, easy)</option>
                 <option value="themartian">"The Martian" by Andy Weir (384, easy)</option>
@@ -945,6 +1068,7 @@
                 <option value="cryptonomicon">"Cryptonomicon" by Neal Stephenson (1168, hard)</option>
                 <option value="anathem">"Anathem" by Neal Stephenson (960, hard)</option>
                 <option value="thebookofthenewsun">"The Book of the New Sun" by Gene Wolfe (912, hard)</option>
+                <option value="fantasy" disabled>Fantasy</option>
                 <option value="stardust">"Stardust" by Neil Gaiman (288, easy)</option>
                 <option value="thenightcircus">"The Night Circus" by Erin Morgenstern (512, easy)</option>
                 <option value="uprooted">"Uprooted" by Naomi Novik (464, easy)</option>
@@ -954,6 +1078,7 @@
                 <option value="thewayofkings">"The Way of Kings" by Brandon Sanderson (1007, hard)</option>
                 <option value="thebladeitself">"The Blade Itself" by Joe Abercrombie (519, hard)</option>
                 <option value="thefinalempire">"The Final Empire" by Michael J. Sullivan (541, hard)</option>
+                <option value="nonfic" disabled>Non-Fic</option>
                 <option value="becoming">"Becoming" by Michelle Obama (426, easy)</option>
                 <option value="theimmortallife">"The Immortal Life of Henrietta Lacks" by Rebecca Skloot (381, easy)</option>
                 <option value="mindset">“Mindset” by Carol Dweck (320, easy)</option>
@@ -963,6 +1088,7 @@
                 <option value="theseven">"The 7 Habits of Highly Effective People" by Stephen R. Covey (384, hard)</option>
                 <option value="thinking">"Thinking, Fast and Slow" by Daniel Kahneman (512, hard)</option>
                 <option value="incoldblood">"In Cold Blood" by Truman Capote (343, hard)</option>
+                <option value="series" disabled>Series</option>
                 <option value="hpone">"Harry Potter and the Philosopher's Stone" by J.K. Rowling (223, easy)</option>
                 <option value="hptwo">"Harry Potter and the Chamber of Secrets" by J.K. Rowling (251, easy)</option>
                 <option value="hpthree">"Harry Potter and the Prisoner of Azkaban" by J.K. Rowling (317, easy)</option>
@@ -974,6 +1100,7 @@
                 <option value="lotrone">"The Fellowship of the Ring" by J.R.R. Tolkien (398, hard)</option>
                 <option value="lotrtwo">"The Two Towers" by J.R.R. Tolkien (447, hard)</option>
                 <option value="lotrthree">"The Return of the King" by J.R.R. Tolkien (416, hard)</option>
+                <option value="french" disabled>French</option>
                 <option value="lepetit">"Le Petit Prince" by Antoine de Saint-Exupéry (96, easy)</option>
                 <option value="meursault">"The Meursault Investigation" by Kamel Daoud (144, easy)</option>
                 <option value="chateau">"Le Château des Étoiles, Tome 1: 1869, La Conquête de l'espace" by Alex Alice (64, easy)</option>
@@ -983,8 +1110,8 @@
                 <option value="lesmiserables">"Les Misérables" by Victor Hugo (1900, hard)</option>
                 <option value="lahorde">"La Horde du Contrevent" by Alain Damasio (688, hard)</option>
                 <option value="lepee">"L'Épée de Vérité, Tome 1: La Première Leçon du Sorcier" by Terry Goodkind (800, hard)</option>
+                <option value="spanish" disabled>Spanish</option>
                 <option value="memorias">"Memorias de Idhún: La Resistencia" by Laura Gallego García (416, easy)</option>
-                
                 <option value="elprincipe">"El Príncipe de la Niebla" by Carlos Ruiz Zafón (232, easy)</option>
                 <option value="pedroparamo">"Pedro Páramo" by Juan Rulfo (124, medium)</option>
                 <option value="laslagrimas">"Las Lágrimas de Shiva" by César Mallorquí (320, medium)</option>
@@ -992,6 +1119,7 @@
                 <option value="laciudad">"La Ciudad de los Prodigios" by Eduardo Mendoza (416, hard)</option>
                 <option value="ellaberinto">"El Laberinto de los Espíritus" by Carlos Ruiz Zafón (928, hard)</option>
                 <option value="eltemor">"El Temor de un Hombre Sabio" by Patrick Rothfuss (1040, hard)</option>
+                <option value="turkish" disabled>Turkish</option>
                 <option value="zaman">"Zaman Çarkı: Dönen Çark" by Murat Sönmez (320, easy)</option>
                 <option value="tuhaf">"Tuhaf Hikayeler Dükkanı" by Mehmet Berk Yaltırık (256, easy)</option>
                 <option value="biryol">"Bir Yol Hikayesi" by Hakan Bıçakcı (192, easy)</option>
@@ -1013,12 +1141,17 @@
           <td style="width: 500px">
             <select id="winter_five" style="width: 400px" onchange="modselector(this)">
                 <option value="unknown"></option>
+                <option value="horror" disabled>Horror</option>
                 <option value="dracula">"Dracula" by Bram Stoker (418, easy)</option>
+                <option value="theturnofthescrew">"The Turn of the Screw" by Henry James (124, easy)</option>
                 <option value="thewomaninblack">"The Woman in Black" by Susan Hill (208, easy)</option>
                 <option value="theshining">"The Shining" by Stephen King (688, medium)</option>
                 <option value="houseofleaves">"House of Leaves" by Mark Z. Danielewski (705, medium)</option>
+                <option value="americanpsycho">"American Psycho" by Bret Easton Ellis (399, medium)</option>
                 <option value="it">"IT" by Stephen King (1138, hard)</option>
                 <option value="theluminousdead">"The Luminous Dead" by Caitlin Starling (432, hard)</option>
+                <option value="theterror">"The Terror" by Dan Simmons (960, hard)</option>
+                <option value="scifi" disabled>Sci-Fi</option>
                 <option value="endersgame">"Ender's Game" by Orson Scott Card (352, easy)</option>
                 <option value="readyplayerone">"Ready Player One" by Ernest Cline (386, easy)</option>
                 <option value="themartian">"The Martian" by Andy Weir (384, easy)</option>
@@ -1028,6 +1161,7 @@
                 <option value="cryptonomicon">"Cryptonomicon" by Neal Stephenson (1168, hard)</option>
                 <option value="anathem">"Anathem" by Neal Stephenson (960, hard)</option>
                 <option value="thebookofthenewsun">"The Book of the New Sun" by Gene Wolfe (912, hard)</option>
+                <option value="fantasy" disabled>Fantasy</option>
                 <option value="stardust">"Stardust" by Neil Gaiman (288, easy)</option>
                 <option value="thenightcircus">"The Night Circus" by Erin Morgenstern (512, easy)</option>
                 <option value="uprooted">"Uprooted" by Naomi Novik (464, easy)</option>
@@ -1037,6 +1171,7 @@
                 <option value="thewayofkings">"The Way of Kings" by Brandon Sanderson (1007, hard)</option>
                 <option value="thebladeitself">"The Blade Itself" by Joe Abercrombie (519, hard)</option>
                 <option value="thefinalempire">"The Final Empire" by Michael J. Sullivan (541, hard)</option>
+                <option value="nonfic" disabled>Non-Fic</option>
                 <option value="becoming">"Becoming" by Michelle Obama (426, easy)</option>
                 <option value="theimmortallife">"The Immortal Life of Henrietta Lacks" by Rebecca Skloot (381, easy)</option>
                 <option value="mindset">“Mindset” by Carol Dweck (320, easy)</option>
@@ -1046,6 +1181,7 @@
                 <option value="theseven">"The 7 Habits of Highly Effective People" by Stephen R. Covey (384, hard)</option>
                 <option value="thinking">"Thinking, Fast and Slow" by Daniel Kahneman (512, hard)</option>
                 <option value="incoldblood">"In Cold Blood" by Truman Capote (343, hard)</option>
+                <option value="series" disabled>Series</option>
                 <option value="hpone">"Harry Potter and the Philosopher's Stone" by J.K. Rowling (223, easy)</option>
                 <option value="hptwo">"Harry Potter and the Chamber of Secrets" by J.K. Rowling (251, easy)</option>
                 <option value="hpthree">"Harry Potter and the Prisoner of Azkaban" by J.K. Rowling (317, easy)</option>
@@ -1057,6 +1193,7 @@
                 <option value="lotrone">"The Fellowship of the Ring" by J.R.R. Tolkien (398, hard)</option>
                 <option value="lotrtwo">"The Two Towers" by J.R.R. Tolkien (447, hard)</option>
                 <option value="lotrthree">"The Return of the King" by J.R.R. Tolkien (416, hard)</option>
+                <option value="french" disabled>French</option>
                 <option value="lepetit">"Le Petit Prince" by Antoine de Saint-Exupéry (96, easy)</option>
                 <option value="meursault">"The Meursault Investigation" by Kamel Daoud (144, easy)</option>
                 <option value="chateau">"Le Château des Étoiles, Tome 1: 1869, La Conquête de l'espace" by Alex Alice (64, easy)</option>
@@ -1066,8 +1203,8 @@
                 <option value="lesmiserables">"Les Misérables" by Victor Hugo (1900, hard)</option>
                 <option value="lahorde">"La Horde du Contrevent" by Alain Damasio (688, hard)</option>
                 <option value="lepee">"L'Épée de Vérité, Tome 1: La Première Leçon du Sorcier" by Terry Goodkind (800, hard)</option>
+                <option value="spanish" disabled>Spanish</option>
                 <option value="memorias">"Memorias de Idhún: La Resistencia" by Laura Gallego García (416, easy)</option>
-                
                 <option value="elprincipe">"El Príncipe de la Niebla" by Carlos Ruiz Zafón (232, easy)</option>
                 <option value="pedroparamo">"Pedro Páramo" by Juan Rulfo (124, medium)</option>
                 <option value="laslagrimas">"Las Lágrimas de Shiva" by César Mallorquí (320, medium)</option>
@@ -1075,6 +1212,7 @@
                 <option value="laciudad">"La Ciudad de los Prodigios" by Eduardo Mendoza (416, hard)</option>
                 <option value="ellaberinto">"El Laberinto de los Espíritus" by Carlos Ruiz Zafón (928, hard)</option>
                 <option value="eltemor">"El Temor de un Hombre Sabio" by Patrick Rothfuss (1040, hard)</option>
+                <option value="turkish" disabled>Turkish</option>
                 <option value="zaman">"Zaman Çarkı: Dönen Çark" by Murat Sönmez (320, easy)</option>
                 <option value="tuhaf">"Tuhaf Hikayeler Dükkanı" by Mehmet Berk Yaltırık (256, easy)</option>
                 <option value="biryol">"Bir Yol Hikayesi" by Hakan Bıçakcı (192, easy)</option>
@@ -1092,12 +1230,17 @@
           <td style="width: 500px">
             <select id="winter_six" style="width: 400px" onchange="modselector(this)">
                 <option value="unknown"></option>
+                <option value="horror" disabled>Horror</option>
                 <option value="dracula">"Dracula" by Bram Stoker (418, easy)</option>
+                <option value="theturnofthescrew">"The Turn of the Screw" by Henry James (124, easy)</option>
                 <option value="thewomaninblack">"The Woman in Black" by Susan Hill (208, easy)</option>
                 <option value="theshining">"The Shining" by Stephen King (688, medium)</option>
                 <option value="houseofleaves">"House of Leaves" by Mark Z. Danielewski (705, medium)</option>
+                <option value="americanpsycho">"American Psycho" by Bret Easton Ellis (399, medium)</option>
                 <option value="it">"IT" by Stephen King (1138, hard)</option>
                 <option value="theluminousdead">"The Luminous Dead" by Caitlin Starling (432, hard)</option>
+                <option value="theterror">"The Terror" by Dan Simmons (960, hard)</option>
+                <option value="scifi" disabled>Sci-Fi</option>
                 <option value="endersgame">"Ender's Game" by Orson Scott Card (352, easy)</option>
                 <option value="readyplayerone">"Ready Player One" by Ernest Cline (386, easy)</option>
                 <option value="themartian">"The Martian" by Andy Weir (384, easy)</option>
@@ -1107,6 +1250,7 @@
                 <option value="cryptonomicon">"Cryptonomicon" by Neal Stephenson (1168, hard)</option>
                 <option value="anathem">"Anathem" by Neal Stephenson (960, hard)</option>
                 <option value="thebookofthenewsun">"The Book of the New Sun" by Gene Wolfe (912, hard)</option>
+                <option value="fantasy" disabled>Fantasy</option>
                 <option value="stardust">"Stardust" by Neil Gaiman (288, easy)</option>
                 <option value="thenightcircus">"The Night Circus" by Erin Morgenstern (512, easy)</option>
                 <option value="uprooted">"Uprooted" by Naomi Novik (464, easy)</option>
@@ -1116,6 +1260,7 @@
                 <option value="thewayofkings">"The Way of Kings" by Brandon Sanderson (1007, hard)</option>
                 <option value="thebladeitself">"The Blade Itself" by Joe Abercrombie (519, hard)</option>
                 <option value="thefinalempire">"The Final Empire" by Michael J. Sullivan (541, hard)</option>
+                <option value="nonfic" disabled>Non-Fic</option>
                 <option value="becoming">"Becoming" by Michelle Obama (426, easy)</option>
                 <option value="theimmortallife">"The Immortal Life of Henrietta Lacks" by Rebecca Skloot (381, easy)</option>
                 <option value="mindset">“Mindset” by Carol Dweck (320, easy)</option>
@@ -1125,6 +1270,7 @@
                 <option value="theseven">"The 7 Habits of Highly Effective People" by Stephen R. Covey (384, hard)</option>
                 <option value="thinking">"Thinking, Fast and Slow" by Daniel Kahneman (512, hard)</option>
                 <option value="incoldblood">"In Cold Blood" by Truman Capote (343, hard)</option>
+                <option value="series" disabled>Series</option>
                 <option value="hpone">"Harry Potter and the Philosopher's Stone" by J.K. Rowling (223, easy)</option>
                 <option value="hptwo">"Harry Potter and the Chamber of Secrets" by J.K. Rowling (251, easy)</option>
                 <option value="hpthree">"Harry Potter and the Prisoner of Azkaban" by J.K. Rowling (317, easy)</option>
@@ -1136,6 +1282,7 @@
                 <option value="lotrone">"The Fellowship of the Ring" by J.R.R. Tolkien (398, hard)</option>
                 <option value="lotrtwo">"The Two Towers" by J.R.R. Tolkien (447, hard)</option>
                 <option value="lotrthree">"The Return of the King" by J.R.R. Tolkien (416, hard)</option>
+                <option value="french" disabled>French</option>
                 <option value="lepetit">"Le Petit Prince" by Antoine de Saint-Exupéry (96, easy)</option>
                 <option value="meursault">"The Meursault Investigation" by Kamel Daoud (144, easy)</option>
                 <option value="chateau">"Le Château des Étoiles, Tome 1: 1869, La Conquête de l'espace" by Alex Alice (64, easy)</option>
@@ -1145,8 +1292,8 @@
                 <option value="lesmiserables">"Les Misérables" by Victor Hugo (1900, hard)</option>
                 <option value="lahorde">"La Horde du Contrevent" by Alain Damasio (688, hard)</option>
                 <option value="lepee">"L'Épée de Vérité, Tome 1: La Première Leçon du Sorcier" by Terry Goodkind (800, hard)</option>
+                <option value="spanish" disabled>Spanish</option>
                 <option value="memorias">"Memorias de Idhún: La Resistencia" by Laura Gallego García (416, easy)</option>
-                
                 <option value="elprincipe">"El Príncipe de la Niebla" by Carlos Ruiz Zafón (232, easy)</option>
                 <option value="pedroparamo">"Pedro Páramo" by Juan Rulfo (124, medium)</option>
                 <option value="laslagrimas">"Las Lágrimas de Shiva" by César Mallorquí (320, medium)</option>
@@ -1154,6 +1301,7 @@
                 <option value="laciudad">"La Ciudad de los Prodigios" by Eduardo Mendoza (416, hard)</option>
                 <option value="ellaberinto">"El Laberinto de los Espíritus" by Carlos Ruiz Zafón (928, hard)</option>
                 <option value="eltemor">"El Temor de un Hombre Sabio" by Patrick Rothfuss (1040, hard)</option>
+                <option value="turkish" disabled>Turkish</option>
                 <option value="zaman">"Zaman Çarkı: Dönen Çark" by Murat Sönmez (320, easy)</option>
                 <option value="tuhaf">"Tuhaf Hikayeler Dükkanı" by Mehmet Berk Yaltırık (256, easy)</option>
                 <option value="biryol">"Bir Yol Hikayesi" by Hakan Bıçakcı (192, easy)</option>
@@ -1175,12 +1323,17 @@
           <td style="width: 500px">
             <select id="winter_seven" style="width: 400px" onchange="modselector(this)">
                 <option value="unknown"></option>
+                <option value="horror" disabled>Horror</option>
                 <option value="dracula">"Dracula" by Bram Stoker (418, easy)</option>
+                <option value="theturnofthescrew">"The Turn of the Screw" by Henry James (124, easy)</option>
                 <option value="thewomaninblack">"The Woman in Black" by Susan Hill (208, easy)</option>
                 <option value="theshining">"The Shining" by Stephen King (688, medium)</option>
                 <option value="houseofleaves">"House of Leaves" by Mark Z. Danielewski (705, medium)</option>
+                <option value="americanpsycho">"American Psycho" by Bret Easton Ellis (399, medium)</option>
                 <option value="it">"IT" by Stephen King (1138, hard)</option>
                 <option value="theluminousdead">"The Luminous Dead" by Caitlin Starling (432, hard)</option>
+                <option value="theterror">"The Terror" by Dan Simmons (960, hard)</option>
+                <option value="scifi" disabled>Sci-Fi</option>
                 <option value="endersgame">"Ender's Game" by Orson Scott Card (352, easy)</option>
                 <option value="readyplayerone">"Ready Player One" by Ernest Cline (386, easy)</option>
                 <option value="themartian">"The Martian" by Andy Weir (384, easy)</option>
@@ -1190,6 +1343,7 @@
                 <option value="cryptonomicon">"Cryptonomicon" by Neal Stephenson (1168, hard)</option>
                 <option value="anathem">"Anathem" by Neal Stephenson (960, hard)</option>
                 <option value="thebookofthenewsun">"The Book of the New Sun" by Gene Wolfe (912, hard)</option>
+                <option value="fantasy" disabled>Fantasy</option>
                 <option value="stardust">"Stardust" by Neil Gaiman (288, easy)</option>
                 <option value="thenightcircus">"The Night Circus" by Erin Morgenstern (512, easy)</option>
                 <option value="uprooted">"Uprooted" by Naomi Novik (464, easy)</option>
@@ -1199,6 +1353,7 @@
                 <option value="thewayofkings">"The Way of Kings" by Brandon Sanderson (1007, hard)</option>
                 <option value="thebladeitself">"The Blade Itself" by Joe Abercrombie (519, hard)</option>
                 <option value="thefinalempire">"The Final Empire" by Michael J. Sullivan (541, hard)</option>
+                <option value="nonfic" disabled>Non-Fic</option>
                 <option value="becoming">"Becoming" by Michelle Obama (426, easy)</option>
                 <option value="theimmortallife">"The Immortal Life of Henrietta Lacks" by Rebecca Skloot (381, easy)</option>
                 <option value="mindset">“Mindset” by Carol Dweck (320, easy)</option>
@@ -1208,6 +1363,7 @@
                 <option value="theseven">"The 7 Habits of Highly Effective People" by Stephen R. Covey (384, hard)</option>
                 <option value="thinking">"Thinking, Fast and Slow" by Daniel Kahneman (512, hard)</option>
                 <option value="incoldblood">"In Cold Blood" by Truman Capote (343, hard)</option>
+                <option value="series" disabled>Series</option>
                 <option value="hpone">"Harry Potter and the Philosopher's Stone" by J.K. Rowling (223, easy)</option>
                 <option value="hptwo">"Harry Potter and the Chamber of Secrets" by J.K. Rowling (251, easy)</option>
                 <option value="hpthree">"Harry Potter and the Prisoner of Azkaban" by J.K. Rowling (317, easy)</option>
@@ -1219,6 +1375,7 @@
                 <option value="lotrone">"The Fellowship of the Ring" by J.R.R. Tolkien (398, hard)</option>
                 <option value="lotrtwo">"The Two Towers" by J.R.R. Tolkien (447, hard)</option>
                 <option value="lotrthree">"The Return of the King" by J.R.R. Tolkien (416, hard)</option>
+                <option value="french" disabled>French</option>
                 <option value="lepetit">"Le Petit Prince" by Antoine de Saint-Exupéry (96, easy)</option>
                 <option value="meursault">"The Meursault Investigation" by Kamel Daoud (144, easy)</option>
                 <option value="chateau">"Le Château des Étoiles, Tome 1: 1869, La Conquête de l'espace" by Alex Alice (64, easy)</option>
@@ -1228,8 +1385,8 @@
                 <option value="lesmiserables">"Les Misérables" by Victor Hugo (1900, hard)</option>
                 <option value="lahorde">"La Horde du Contrevent" by Alain Damasio (688, hard)</option>
                 <option value="lepee">"L'Épée de Vérité, Tome 1: La Première Leçon du Sorcier" by Terry Goodkind (800, hard)</option>
+                <option value="spanish" disabled>Spanish</option>
                 <option value="memorias">"Memorias de Idhún: La Resistencia" by Laura Gallego García (416, easy)</option>
-                
                 <option value="elprincipe">"El Príncipe de la Niebla" by Carlos Ruiz Zafón (232, easy)</option>
                 <option value="pedroparamo">"Pedro Páramo" by Juan Rulfo (124, medium)</option>
                 <option value="laslagrimas">"Las Lágrimas de Shiva" by César Mallorquí (320, medium)</option>
@@ -1237,6 +1394,7 @@
                 <option value="laciudad">"La Ciudad de los Prodigios" by Eduardo Mendoza (416, hard)</option>
                 <option value="ellaberinto">"El Laberinto de los Espíritus" by Carlos Ruiz Zafón (928, hard)</option>
                 <option value="eltemor">"El Temor de un Hombre Sabio" by Patrick Rothfuss (1040, hard)</option>
+                <option value="turkish" disabled>Turkish</option>
                 <option value="zaman">"Zaman Çarkı: Dönen Çark" by Murat Sönmez (320, easy)</option>
                 <option value="tuhaf">"Tuhaf Hikayeler Dükkanı" by Mehmet Berk Yaltırık (256, easy)</option>
                 <option value="biryol">"Bir Yol Hikayesi" by Hakan Bıçakcı (192, easy)</option>
@@ -1254,12 +1412,17 @@
           <td style="width: 500px">
             <select id="winter_eight" style="width: 400px" onchange="modselector(this)">
                 <option value="unknown"></option>
+                <option value="horror" disabled>Horror</option>
                 <option value="dracula">"Dracula" by Bram Stoker (418, easy)</option>
+                <option value="theturnofthescrew">"The Turn of the Screw" by Henry James (124, easy)</option>
                 <option value="thewomaninblack">"The Woman in Black" by Susan Hill (208, easy)</option>
                 <option value="theshining">"The Shining" by Stephen King (688, medium)</option>
                 <option value="houseofleaves">"House of Leaves" by Mark Z. Danielewski (705, medium)</option>
+                <option value="americanpsycho">"American Psycho" by Bret Easton Ellis (399, medium)</option>
                 <option value="it">"IT" by Stephen King (1138, hard)</option>
                 <option value="theluminousdead">"The Luminous Dead" by Caitlin Starling (432, hard)</option>
+                <option value="theterror">"The Terror" by Dan Simmons (960, hard)</option>
+                <option value="scifi" disabled>Sci-Fi</option>
                 <option value="endersgame">"Ender's Game" by Orson Scott Card (352, easy)</option>
                 <option value="readyplayerone">"Ready Player One" by Ernest Cline (386, easy)</option>
                 <option value="themartian">"The Martian" by Andy Weir (384, easy)</option>
@@ -1269,6 +1432,7 @@
                 <option value="cryptonomicon">"Cryptonomicon" by Neal Stephenson (1168, hard)</option>
                 <option value="anathem">"Anathem" by Neal Stephenson (960, hard)</option>
                 <option value="thebookofthenewsun">"The Book of the New Sun" by Gene Wolfe (912, hard)</option>
+                <option value="fantasy" disabled>Fantasy</option>
                 <option value="stardust">"Stardust" by Neil Gaiman (288, easy)</option>
                 <option value="thenightcircus">"The Night Circus" by Erin Morgenstern (512, easy)</option>
                 <option value="uprooted">"Uprooted" by Naomi Novik (464, easy)</option>
@@ -1278,6 +1442,7 @@
                 <option value="thewayofkings">"The Way of Kings" by Brandon Sanderson (1007, hard)</option>
                 <option value="thebladeitself">"The Blade Itself" by Joe Abercrombie (519, hard)</option>
                 <option value="thefinalempire">"The Final Empire" by Michael J. Sullivan (541, hard)</option>
+                <option value="nonfic" disabled>Non-Fic</option>
                 <option value="becoming">"Becoming" by Michelle Obama (426, easy)</option>
                 <option value="theimmortallife">"The Immortal Life of Henrietta Lacks" by Rebecca Skloot (381, easy)</option>
                 <option value="mindset">“Mindset” by Carol Dweck (320, easy)</option>
@@ -1287,6 +1452,7 @@
                 <option value="theseven">"The 7 Habits of Highly Effective People" by Stephen R. Covey (384, hard)</option>
                 <option value="thinking">"Thinking, Fast and Slow" by Daniel Kahneman (512, hard)</option>
                 <option value="incoldblood">"In Cold Blood" by Truman Capote (343, hard)</option>
+                <option value="series" disabled>Series</option>
                 <option value="hpone">"Harry Potter and the Philosopher's Stone" by J.K. Rowling (223, easy)</option>
                 <option value="hptwo">"Harry Potter and the Chamber of Secrets" by J.K. Rowling (251, easy)</option>
                 <option value="hpthree">"Harry Potter and the Prisoner of Azkaban" by J.K. Rowling (317, easy)</option>
@@ -1298,6 +1464,7 @@
                 <option value="lotrone">"The Fellowship of the Ring" by J.R.R. Tolkien (398, hard)</option>
                 <option value="lotrtwo">"The Two Towers" by J.R.R. Tolkien (447, hard)</option>
                 <option value="lotrthree">"The Return of the King" by J.R.R. Tolkien (416, hard)</option>
+                <option value="french" disabled>French</option>
                 <option value="lepetit">"Le Petit Prince" by Antoine de Saint-Exupéry (96, easy)</option>
                 <option value="meursault">"The Meursault Investigation" by Kamel Daoud (144, easy)</option>
                 <option value="chateau">"Le Château des Étoiles, Tome 1: 1869, La Conquête de l'espace" by Alex Alice (64, easy)</option>
@@ -1307,8 +1474,8 @@
                 <option value="lesmiserables">"Les Misérables" by Victor Hugo (1900, hard)</option>
                 <option value="lahorde">"La Horde du Contrevent" by Alain Damasio (688, hard)</option>
                 <option value="lepee">"L'Épée de Vérité, Tome 1: La Première Leçon du Sorcier" by Terry Goodkind (800, hard)</option>
+                <option value="spanish" disabled>Spanish</option>
                 <option value="memorias">"Memorias de Idhún: La Resistencia" by Laura Gallego García (416, easy)</option>
-                
                 <option value="elprincipe">"El Príncipe de la Niebla" by Carlos Ruiz Zafón (232, easy)</option>
                 <option value="pedroparamo">"Pedro Páramo" by Juan Rulfo (124, medium)</option>
                 <option value="laslagrimas">"Las Lágrimas de Shiva" by César Mallorquí (320, medium)</option>
@@ -1316,6 +1483,7 @@
                 <option value="laciudad">"La Ciudad de los Prodigios" by Eduardo Mendoza (416, hard)</option>
                 <option value="ellaberinto">"El Laberinto de los Espíritus" by Carlos Ruiz Zafón (928, hard)</option>
                 <option value="eltemor">"El Temor de un Hombre Sabio" by Patrick Rothfuss (1040, hard)</option>
+                <option value="turkish" disabled>Turkish</option>
                 <option value="zaman">"Zaman Çarkı: Dönen Çark" by Murat Sönmez (320, easy)</option>
                 <option value="tuhaf">"Tuhaf Hikayeler Dükkanı" by Mehmet Berk Yaltırık (256, easy)</option>
                 <option value="biryol">"Bir Yol Hikayesi" by Hakan Bıçakcı (192, easy)</option>
@@ -1330,10 +1498,9 @@
         </tr>
         <tr style="height: 15px">
         </tr>
-
         <!-- SPRING -->     
         <tr>
-          <td style="width: 80px; text-align: left; font-weight: bold">
+          <td style="width: 100px; text-align: left; font-weight: bold">
             SPRING
           </td>
           <td>
@@ -1342,12 +1509,17 @@
           <td style="width: 560px">
             <select id="spring_one" style="width: 400px" onchange="modselector(this)">
                 <option value="unknown"></option>
+                <option value="horror" disabled>Horror</option>
                 <option value="dracula">"Dracula" by Bram Stoker (418, easy)</option>
+                <option value="theturnofthescrew">"The Turn of the Screw" by Henry James (124, easy)</option>
                 <option value="thewomaninblack">"The Woman in Black" by Susan Hill (208, easy)</option>
                 <option value="theshining">"The Shining" by Stephen King (688, medium)</option>
                 <option value="houseofleaves">"House of Leaves" by Mark Z. Danielewski (705, medium)</option>
+                <option value="americanpsycho">"American Psycho" by Bret Easton Ellis (399, medium)</option>
                 <option value="it">"IT" by Stephen King (1138, hard)</option>
                 <option value="theluminousdead">"The Luminous Dead" by Caitlin Starling (432, hard)</option>
+                <option value="theterror">"The Terror" by Dan Simmons (960, hard)</option>
+                <option value="scifi" disabled>Sci-Fi</option>
                 <option value="endersgame">"Ender's Game" by Orson Scott Card (352, easy)</option>
                 <option value="readyplayerone">"Ready Player One" by Ernest Cline (386, easy)</option>
                 <option value="themartian">"The Martian" by Andy Weir (384, easy)</option>
@@ -1357,6 +1529,7 @@
                 <option value="cryptonomicon">"Cryptonomicon" by Neal Stephenson (1168, hard)</option>
                 <option value="anathem">"Anathem" by Neal Stephenson (960, hard)</option>
                 <option value="thebookofthenewsun">"The Book of the New Sun" by Gene Wolfe (912, hard)</option>
+                <option value="fantasy" disabled>Fantasy</option>
                 <option value="stardust">"Stardust" by Neil Gaiman (288, easy)</option>
                 <option value="thenightcircus">"The Night Circus" by Erin Morgenstern (512, easy)</option>
                 <option value="uprooted">"Uprooted" by Naomi Novik (464, easy)</option>
@@ -1366,6 +1539,7 @@
                 <option value="thewayofkings">"The Way of Kings" by Brandon Sanderson (1007, hard)</option>
                 <option value="thebladeitself">"The Blade Itself" by Joe Abercrombie (519, hard)</option>
                 <option value="thefinalempire">"The Final Empire" by Michael J. Sullivan (541, hard)</option>
+                <option value="nonfic" disabled>Non-Fic</option>
                 <option value="becoming">"Becoming" by Michelle Obama (426, easy)</option>
                 <option value="theimmortallife">"The Immortal Life of Henrietta Lacks" by Rebecca Skloot (381, easy)</option>
                 <option value="mindset">“Mindset” by Carol Dweck (320, easy)</option>
@@ -1375,6 +1549,7 @@
                 <option value="theseven">"The 7 Habits of Highly Effective People" by Stephen R. Covey (384, hard)</option>
                 <option value="thinking">"Thinking, Fast and Slow" by Daniel Kahneman (512, hard)</option>
                 <option value="incoldblood">"In Cold Blood" by Truman Capote (343, hard)</option>
+                <option value="series" disabled>Series</option>
                 <option value="hpone">"Harry Potter and the Philosopher's Stone" by J.K. Rowling (223, easy)</option>
                 <option value="hptwo">"Harry Potter and the Chamber of Secrets" by J.K. Rowling (251, easy)</option>
                 <option value="hpthree">"Harry Potter and the Prisoner of Azkaban" by J.K. Rowling (317, easy)</option>
@@ -1386,6 +1561,7 @@
                 <option value="lotrone">"The Fellowship of the Ring" by J.R.R. Tolkien (398, hard)</option>
                 <option value="lotrtwo">"The Two Towers" by J.R.R. Tolkien (447, hard)</option>
                 <option value="lotrthree">"The Return of the King" by J.R.R. Tolkien (416, hard)</option>
+                <option value="french" disabled>French</option>
                 <option value="lepetit">"Le Petit Prince" by Antoine de Saint-Exupéry (96, easy)</option>
                 <option value="meursault">"The Meursault Investigation" by Kamel Daoud (144, easy)</option>
                 <option value="chateau">"Le Château des Étoiles, Tome 1: 1869, La Conquête de l'espace" by Alex Alice (64, easy)</option>
@@ -1395,8 +1571,8 @@
                 <option value="lesmiserables">"Les Misérables" by Victor Hugo (1900, hard)</option>
                 <option value="lahorde">"La Horde du Contrevent" by Alain Damasio (688, hard)</option>
                 <option value="lepee">"L'Épée de Vérité, Tome 1: La Première Leçon du Sorcier" by Terry Goodkind (800, hard)</option>
+                <option value="spanish" disabled>Spanish</option>
                 <option value="memorias">"Memorias de Idhún: La Resistencia" by Laura Gallego García (416, easy)</option>
-                
                 <option value="elprincipe">"El Príncipe de la Niebla" by Carlos Ruiz Zafón (232, easy)</option>
                 <option value="pedroparamo">"Pedro Páramo" by Juan Rulfo (124, medium)</option>
                 <option value="laslagrimas">"Las Lágrimas de Shiva" by César Mallorquí (320, medium)</option>
@@ -1404,6 +1580,7 @@
                 <option value="laciudad">"La Ciudad de los Prodigios" by Eduardo Mendoza (416, hard)</option>
                 <option value="ellaberinto">"El Laberinto de los Espíritus" by Carlos Ruiz Zafón (928, hard)</option>
                 <option value="eltemor">"El Temor de un Hombre Sabio" by Patrick Rothfuss (1040, hard)</option>
+                <option value="turkish" disabled>Turkish</option>
                 <option value="zaman">"Zaman Çarkı: Dönen Çark" by Murat Sönmez (320, easy)</option>
                 <option value="tuhaf">"Tuhaf Hikayeler Dükkanı" by Mehmet Berk Yaltırık (256, easy)</option>
                 <option value="biryol">"Bir Yol Hikayesi" by Hakan Bıçakcı (192, easy)</option>
@@ -1421,12 +1598,17 @@
           <td style="width: 500px">
             <select id="spring_two" style="width: 400px" onchange="modselector(this)">
                 <option value="unknown"></option>
+                <option value="horror" disabled>Horror</option>
                 <option value="dracula">"Dracula" by Bram Stoker (418, easy)</option>
+                <option value="theturnofthescrew">"The Turn of the Screw" by Henry James (124, easy)</option>
                 <option value="thewomaninblack">"The Woman in Black" by Susan Hill (208, easy)</option>
                 <option value="theshining">"The Shining" by Stephen King (688, medium)</option>
                 <option value="houseofleaves">"House of Leaves" by Mark Z. Danielewski (705, medium)</option>
+                <option value="americanpsycho">"American Psycho" by Bret Easton Ellis (399, medium)</option>
                 <option value="it">"IT" by Stephen King (1138, hard)</option>
                 <option value="theluminousdead">"The Luminous Dead" by Caitlin Starling (432, hard)</option>
+                <option value="theterror">"The Terror" by Dan Simmons (960, hard)</option>
+                <option value="scifi" disabled>Sci-Fi</option>
                 <option value="endersgame">"Ender's Game" by Orson Scott Card (352, easy)</option>
                 <option value="readyplayerone">"Ready Player One" by Ernest Cline (386, easy)</option>
                 <option value="themartian">"The Martian" by Andy Weir (384, easy)</option>
@@ -1436,6 +1618,7 @@
                 <option value="cryptonomicon">"Cryptonomicon" by Neal Stephenson (1168, hard)</option>
                 <option value="anathem">"Anathem" by Neal Stephenson (960, hard)</option>
                 <option value="thebookofthenewsun">"The Book of the New Sun" by Gene Wolfe (912, hard)</option>
+                <option value="fantasy" disabled>Fantasy</option>
                 <option value="stardust">"Stardust" by Neil Gaiman (288, easy)</option>
                 <option value="thenightcircus">"The Night Circus" by Erin Morgenstern (512, easy)</option>
                 <option value="uprooted">"Uprooted" by Naomi Novik (464, easy)</option>
@@ -1445,6 +1628,7 @@
                 <option value="thewayofkings">"The Way of Kings" by Brandon Sanderson (1007, hard)</option>
                 <option value="thebladeitself">"The Blade Itself" by Joe Abercrombie (519, hard)</option>
                 <option value="thefinalempire">"The Final Empire" by Michael J. Sullivan (541, hard)</option>
+                <option value="nonfic" disabled>Non-Fic</option>
                 <option value="becoming">"Becoming" by Michelle Obama (426, easy)</option>
                 <option value="theimmortallife">"The Immortal Life of Henrietta Lacks" by Rebecca Skloot (381, easy)</option>
                 <option value="mindset">“Mindset” by Carol Dweck (320, easy)</option>
@@ -1454,6 +1638,7 @@
                 <option value="theseven">"The 7 Habits of Highly Effective People" by Stephen R. Covey (384, hard)</option>
                 <option value="thinking">"Thinking, Fast and Slow" by Daniel Kahneman (512, hard)</option>
                 <option value="incoldblood">"In Cold Blood" by Truman Capote (343, hard)</option>
+                <option value="series" disabled>Series</option>
                 <option value="hpone">"Harry Potter and the Philosopher's Stone" by J.K. Rowling (223, easy)</option>
                 <option value="hptwo">"Harry Potter and the Chamber of Secrets" by J.K. Rowling (251, easy)</option>
                 <option value="hpthree">"Harry Potter and the Prisoner of Azkaban" by J.K. Rowling (317, easy)</option>
@@ -1465,6 +1650,7 @@
                 <option value="lotrone">"The Fellowship of the Ring" by J.R.R. Tolkien (398, hard)</option>
                 <option value="lotrtwo">"The Two Towers" by J.R.R. Tolkien (447, hard)</option>
                 <option value="lotrthree">"The Return of the King" by J.R.R. Tolkien (416, hard)</option>
+                <option value="french" disabled>French</option>
                 <option value="lepetit">"Le Petit Prince" by Antoine de Saint-Exupéry (96, easy)</option>
                 <option value="meursault">"The Meursault Investigation" by Kamel Daoud (144, easy)</option>
                 <option value="chateau">"Le Château des Étoiles, Tome 1: 1869, La Conquête de l'espace" by Alex Alice (64, easy)</option>
@@ -1474,8 +1660,8 @@
                 <option value="lesmiserables">"Les Misérables" by Victor Hugo (1900, hard)</option>
                 <option value="lahorde">"La Horde du Contrevent" by Alain Damasio (688, hard)</option>
                 <option value="lepee">"L'Épée de Vérité, Tome 1: La Première Leçon du Sorcier" by Terry Goodkind (800, hard)</option>
+                <option value="spanish" disabled>Spanish</option>
                 <option value="memorias">"Memorias de Idhún: La Resistencia" by Laura Gallego García (416, easy)</option>
-                
                 <option value="elprincipe">"El Príncipe de la Niebla" by Carlos Ruiz Zafón (232, easy)</option>
                 <option value="pedroparamo">"Pedro Páramo" by Juan Rulfo (124, medium)</option>
                 <option value="laslagrimas">"Las Lágrimas de Shiva" by César Mallorquí (320, medium)</option>
@@ -1483,6 +1669,7 @@
                 <option value="laciudad">"La Ciudad de los Prodigios" by Eduardo Mendoza (416, hard)</option>
                 <option value="ellaberinto">"El Laberinto de los Espíritus" by Carlos Ruiz Zafón (928, hard)</option>
                 <option value="eltemor">"El Temor de un Hombre Sabio" by Patrick Rothfuss (1040, hard)</option>
+                <option value="turkish" disabled>Turkish</option>
                 <option value="zaman">"Zaman Çarkı: Dönen Çark" by Murat Sönmez (320, easy)</option>
                 <option value="tuhaf">"Tuhaf Hikayeler Dükkanı" by Mehmet Berk Yaltırık (256, easy)</option>
                 <option value="biryol">"Bir Yol Hikayesi" by Hakan Bıçakcı (192, easy)</option>
@@ -1503,13 +1690,18 @@
           </td>
           <td style="width: 500px">
             <select id="spring_three" style="width: 400px" onchange="modselector(this)">
-               <option value="unknown"></option>
-               <option value="dracula">"Dracula" by Bram Stoker (418, easy)</option>
+                <option value="unknown"></option>
+                <option value="horror" disabled>Horror</option>
+                <option value="dracula">"Dracula" by Bram Stoker (418, easy)</option>
+                <option value="theturnofthescrew">"The Turn of the Screw" by Henry James (124, easy)</option>
                 <option value="thewomaninblack">"The Woman in Black" by Susan Hill (208, easy)</option>
                 <option value="theshining">"The Shining" by Stephen King (688, medium)</option>
                 <option value="houseofleaves">"House of Leaves" by Mark Z. Danielewski (705, medium)</option>
+                <option value="americanpsycho">"American Psycho" by Bret Easton Ellis (399, medium)</option>
                 <option value="it">"IT" by Stephen King (1138, hard)</option>
                 <option value="theluminousdead">"The Luminous Dead" by Caitlin Starling (432, hard)</option>
+                <option value="theterror">"The Terror" by Dan Simmons (960, hard)</option>
+                <option value="scifi" disabled>Sci-Fi</option>
                 <option value="endersgame">"Ender's Game" by Orson Scott Card (352, easy)</option>
                 <option value="readyplayerone">"Ready Player One" by Ernest Cline (386, easy)</option>
                 <option value="themartian">"The Martian" by Andy Weir (384, easy)</option>
@@ -1519,6 +1711,7 @@
                 <option value="cryptonomicon">"Cryptonomicon" by Neal Stephenson (1168, hard)</option>
                 <option value="anathem">"Anathem" by Neal Stephenson (960, hard)</option>
                 <option value="thebookofthenewsun">"The Book of the New Sun" by Gene Wolfe (912, hard)</option>
+                <option value="fantasy" disabled>Fantasy</option>
                 <option value="stardust">"Stardust" by Neil Gaiman (288, easy)</option>
                 <option value="thenightcircus">"The Night Circus" by Erin Morgenstern (512, easy)</option>
                 <option value="uprooted">"Uprooted" by Naomi Novik (464, easy)</option>
@@ -1528,6 +1721,7 @@
                 <option value="thewayofkings">"The Way of Kings" by Brandon Sanderson (1007, hard)</option>
                 <option value="thebladeitself">"The Blade Itself" by Joe Abercrombie (519, hard)</option>
                 <option value="thefinalempire">"The Final Empire" by Michael J. Sullivan (541, hard)</option>
+                <option value="nonfic" disabled>Non-Fic</option>
                 <option value="becoming">"Becoming" by Michelle Obama (426, easy)</option>
                 <option value="theimmortallife">"The Immortal Life of Henrietta Lacks" by Rebecca Skloot (381, easy)</option>
                 <option value="mindset">“Mindset” by Carol Dweck (320, easy)</option>
@@ -1537,6 +1731,7 @@
                 <option value="theseven">"The 7 Habits of Highly Effective People" by Stephen R. Covey (384, hard)</option>
                 <option value="thinking">"Thinking, Fast and Slow" by Daniel Kahneman (512, hard)</option>
                 <option value="incoldblood">"In Cold Blood" by Truman Capote (343, hard)</option>
+                <option value="series" disabled>Series</option>
                 <option value="hpone">"Harry Potter and the Philosopher's Stone" by J.K. Rowling (223, easy)</option>
                 <option value="hptwo">"Harry Potter and the Chamber of Secrets" by J.K. Rowling (251, easy)</option>
                 <option value="hpthree">"Harry Potter and the Prisoner of Azkaban" by J.K. Rowling (317, easy)</option>
@@ -1548,6 +1743,7 @@
                 <option value="lotrone">"The Fellowship of the Ring" by J.R.R. Tolkien (398, hard)</option>
                 <option value="lotrtwo">"The Two Towers" by J.R.R. Tolkien (447, hard)</option>
                 <option value="lotrthree">"The Return of the King" by J.R.R. Tolkien (416, hard)</option>
+                <option value="french" disabled>French</option>
                 <option value="lepetit">"Le Petit Prince" by Antoine de Saint-Exupéry (96, easy)</option>
                 <option value="meursault">"The Meursault Investigation" by Kamel Daoud (144, easy)</option>
                 <option value="chateau">"Le Château des Étoiles, Tome 1: 1869, La Conquête de l'espace" by Alex Alice (64, easy)</option>
@@ -1557,8 +1753,8 @@
                 <option value="lesmiserables">"Les Misérables" by Victor Hugo (1900, hard)</option>
                 <option value="lahorde">"La Horde du Contrevent" by Alain Damasio (688, hard)</option>
                 <option value="lepee">"L'Épée de Vérité, Tome 1: La Première Leçon du Sorcier" by Terry Goodkind (800, hard)</option>
+                <option value="spanish" disabled>Spanish</option>
                 <option value="memorias">"Memorias de Idhún: La Resistencia" by Laura Gallego García (416, easy)</option>
-                
                 <option value="elprincipe">"El Príncipe de la Niebla" by Carlos Ruiz Zafón (232, easy)</option>
                 <option value="pedroparamo">"Pedro Páramo" by Juan Rulfo (124, medium)</option>
                 <option value="laslagrimas">"Las Lágrimas de Shiva" by César Mallorquí (320, medium)</option>
@@ -1566,6 +1762,7 @@
                 <option value="laciudad">"La Ciudad de los Prodigios" by Eduardo Mendoza (416, hard)</option>
                 <option value="ellaberinto">"El Laberinto de los Espíritus" by Carlos Ruiz Zafón (928, hard)</option>
                 <option value="eltemor">"El Temor de un Hombre Sabio" by Patrick Rothfuss (1040, hard)</option>
+                <option value="turkish" disabled>Turkish</option>
                 <option value="zaman">"Zaman Çarkı: Dönen Çark" by Murat Sönmez (320, easy)</option>
                 <option value="tuhaf">"Tuhaf Hikayeler Dükkanı" by Mehmet Berk Yaltırık (256, easy)</option>
                 <option value="biryol">"Bir Yol Hikayesi" by Hakan Bıçakcı (192, easy)</option>
@@ -1583,12 +1780,17 @@
           <td style="width: 500px">
             <select id="spring_four" style="width: 400px" onchange="modselector(this)">
                 <option value="unknown"></option>
+                <option value="horror" disabled>Horror</option>
                 <option value="dracula">"Dracula" by Bram Stoker (418, easy)</option>
+                <option value="theturnofthescrew">"The Turn of the Screw" by Henry James (124, easy)</option>
                 <option value="thewomaninblack">"The Woman in Black" by Susan Hill (208, easy)</option>
                 <option value="theshining">"The Shining" by Stephen King (688, medium)</option>
                 <option value="houseofleaves">"House of Leaves" by Mark Z. Danielewski (705, medium)</option>
+                <option value="americanpsycho">"American Psycho" by Bret Easton Ellis (399, medium)</option>
                 <option value="it">"IT" by Stephen King (1138, hard)</option>
                 <option value="theluminousdead">"The Luminous Dead" by Caitlin Starling (432, hard)</option>
+                <option value="theterror">"The Terror" by Dan Simmons (960, hard)</option>
+                <option value="scifi" disabled>Sci-Fi</option>
                 <option value="endersgame">"Ender's Game" by Orson Scott Card (352, easy)</option>
                 <option value="readyplayerone">"Ready Player One" by Ernest Cline (386, easy)</option>
                 <option value="themartian">"The Martian" by Andy Weir (384, easy)</option>
@@ -1598,6 +1800,7 @@
                 <option value="cryptonomicon">"Cryptonomicon" by Neal Stephenson (1168, hard)</option>
                 <option value="anathem">"Anathem" by Neal Stephenson (960, hard)</option>
                 <option value="thebookofthenewsun">"The Book of the New Sun" by Gene Wolfe (912, hard)</option>
+                <option value="fantasy" disabled>Fantasy</option>
                 <option value="stardust">"Stardust" by Neil Gaiman (288, easy)</option>
                 <option value="thenightcircus">"The Night Circus" by Erin Morgenstern (512, easy)</option>
                 <option value="uprooted">"Uprooted" by Naomi Novik (464, easy)</option>
@@ -1607,6 +1810,7 @@
                 <option value="thewayofkings">"The Way of Kings" by Brandon Sanderson (1007, hard)</option>
                 <option value="thebladeitself">"The Blade Itself" by Joe Abercrombie (519, hard)</option>
                 <option value="thefinalempire">"The Final Empire" by Michael J. Sullivan (541, hard)</option>
+                <option value="nonfic" disabled>Non-Fic</option>
                 <option value="becoming">"Becoming" by Michelle Obama (426, easy)</option>
                 <option value="theimmortallife">"The Immortal Life of Henrietta Lacks" by Rebecca Skloot (381, easy)</option>
                 <option value="mindset">“Mindset” by Carol Dweck (320, easy)</option>
@@ -1616,6 +1820,7 @@
                 <option value="theseven">"The 7 Habits of Highly Effective People" by Stephen R. Covey (384, hard)</option>
                 <option value="thinking">"Thinking, Fast and Slow" by Daniel Kahneman (512, hard)</option>
                 <option value="incoldblood">"In Cold Blood" by Truman Capote (343, hard)</option>
+                <option value="series" disabled>Series</option>
                 <option value="hpone">"Harry Potter and the Philosopher's Stone" by J.K. Rowling (223, easy)</option>
                 <option value="hptwo">"Harry Potter and the Chamber of Secrets" by J.K. Rowling (251, easy)</option>
                 <option value="hpthree">"Harry Potter and the Prisoner of Azkaban" by J.K. Rowling (317, easy)</option>
@@ -1627,6 +1832,7 @@
                 <option value="lotrone">"The Fellowship of the Ring" by J.R.R. Tolkien (398, hard)</option>
                 <option value="lotrtwo">"The Two Towers" by J.R.R. Tolkien (447, hard)</option>
                 <option value="lotrthree">"The Return of the King" by J.R.R. Tolkien (416, hard)</option>
+                <option value="french" disabled>French</option>
                 <option value="lepetit">"Le Petit Prince" by Antoine de Saint-Exupéry (96, easy)</option>
                 <option value="meursault">"The Meursault Investigation" by Kamel Daoud (144, easy)</option>
                 <option value="chateau">"Le Château des Étoiles, Tome 1: 1869, La Conquête de l'espace" by Alex Alice (64, easy)</option>
@@ -1636,8 +1842,8 @@
                 <option value="lesmiserables">"Les Misérables" by Victor Hugo (1900, hard)</option>
                 <option value="lahorde">"La Horde du Contrevent" by Alain Damasio (688, hard)</option>
                 <option value="lepee">"L'Épée de Vérité, Tome 1: La Première Leçon du Sorcier" by Terry Goodkind (800, hard)</option>
+                <option value="spanish" disabled>Spanish</option>
                 <option value="memorias">"Memorias de Idhún: La Resistencia" by Laura Gallego García (416, easy)</option>
-                
                 <option value="elprincipe">"El Príncipe de la Niebla" by Carlos Ruiz Zafón (232, easy)</option>
                 <option value="pedroparamo">"Pedro Páramo" by Juan Rulfo (124, medium)</option>
                 <option value="laslagrimas">"Las Lágrimas de Shiva" by César Mallorquí (320, medium)</option>
@@ -1645,6 +1851,7 @@
                 <option value="laciudad">"La Ciudad de los Prodigios" by Eduardo Mendoza (416, hard)</option>
                 <option value="ellaberinto">"El Laberinto de los Espíritus" by Carlos Ruiz Zafón (928, hard)</option>
                 <option value="eltemor">"El Temor de un Hombre Sabio" by Patrick Rothfuss (1040, hard)</option>
+                <option value="turkish" disabled>Turkish</option>
                 <option value="zaman">"Zaman Çarkı: Dönen Çark" by Murat Sönmez (320, easy)</option>
                 <option value="tuhaf">"Tuhaf Hikayeler Dükkanı" by Mehmet Berk Yaltırık (256, easy)</option>
                 <option value="biryol">"Bir Yol Hikayesi" by Hakan Bıçakcı (192, easy)</option>
@@ -1666,12 +1873,17 @@
           <td style="width: 500px">
             <select id="spring_five" style="width: 400px" onchange="modselector(this)">
                 <option value="unknown"></option>
+                <option value="horror" disabled>Horror</option>
                 <option value="dracula">"Dracula" by Bram Stoker (418, easy)</option>
+                <option value="theturnofthescrew">"The Turn of the Screw" by Henry James (124, easy)</option>
                 <option value="thewomaninblack">"The Woman in Black" by Susan Hill (208, easy)</option>
                 <option value="theshining">"The Shining" by Stephen King (688, medium)</option>
                 <option value="houseofleaves">"House of Leaves" by Mark Z. Danielewski (705, medium)</option>
+                <option value="americanpsycho">"American Psycho" by Bret Easton Ellis (399, medium)</option>
                 <option value="it">"IT" by Stephen King (1138, hard)</option>
                 <option value="theluminousdead">"The Luminous Dead" by Caitlin Starling (432, hard)</option>
+                <option value="theterror">"The Terror" by Dan Simmons (960, hard)</option>
+                <option value="scifi" disabled>Sci-Fi</option>
                 <option value="endersgame">"Ender's Game" by Orson Scott Card (352, easy)</option>
                 <option value="readyplayerone">"Ready Player One" by Ernest Cline (386, easy)</option>
                 <option value="themartian">"The Martian" by Andy Weir (384, easy)</option>
@@ -1681,6 +1893,7 @@
                 <option value="cryptonomicon">"Cryptonomicon" by Neal Stephenson (1168, hard)</option>
                 <option value="anathem">"Anathem" by Neal Stephenson (960, hard)</option>
                 <option value="thebookofthenewsun">"The Book of the New Sun" by Gene Wolfe (912, hard)</option>
+                <option value="fantasy" disabled>Fantasy</option>
                 <option value="stardust">"Stardust" by Neil Gaiman (288, easy)</option>
                 <option value="thenightcircus">"The Night Circus" by Erin Morgenstern (512, easy)</option>
                 <option value="uprooted">"Uprooted" by Naomi Novik (464, easy)</option>
@@ -1690,6 +1903,7 @@
                 <option value="thewayofkings">"The Way of Kings" by Brandon Sanderson (1007, hard)</option>
                 <option value="thebladeitself">"The Blade Itself" by Joe Abercrombie (519, hard)</option>
                 <option value="thefinalempire">"The Final Empire" by Michael J. Sullivan (541, hard)</option>
+                <option value="nonfic" disabled>Non-Fic</option>
                 <option value="becoming">"Becoming" by Michelle Obama (426, easy)</option>
                 <option value="theimmortallife">"The Immortal Life of Henrietta Lacks" by Rebecca Skloot (381, easy)</option>
                 <option value="mindset">“Mindset” by Carol Dweck (320, easy)</option>
@@ -1699,6 +1913,7 @@
                 <option value="theseven">"The 7 Habits of Highly Effective People" by Stephen R. Covey (384, hard)</option>
                 <option value="thinking">"Thinking, Fast and Slow" by Daniel Kahneman (512, hard)</option>
                 <option value="incoldblood">"In Cold Blood" by Truman Capote (343, hard)</option>
+                <option value="series" disabled>Series</option>
                 <option value="hpone">"Harry Potter and the Philosopher's Stone" by J.K. Rowling (223, easy)</option>
                 <option value="hptwo">"Harry Potter and the Chamber of Secrets" by J.K. Rowling (251, easy)</option>
                 <option value="hpthree">"Harry Potter and the Prisoner of Azkaban" by J.K. Rowling (317, easy)</option>
@@ -1710,6 +1925,7 @@
                 <option value="lotrone">"The Fellowship of the Ring" by J.R.R. Tolkien (398, hard)</option>
                 <option value="lotrtwo">"The Two Towers" by J.R.R. Tolkien (447, hard)</option>
                 <option value="lotrthree">"The Return of the King" by J.R.R. Tolkien (416, hard)</option>
+                <option value="french" disabled>French</option>
                 <option value="lepetit">"Le Petit Prince" by Antoine de Saint-Exupéry (96, easy)</option>
                 <option value="meursault">"The Meursault Investigation" by Kamel Daoud (144, easy)</option>
                 <option value="chateau">"Le Château des Étoiles, Tome 1: 1869, La Conquête de l'espace" by Alex Alice (64, easy)</option>
@@ -1719,8 +1935,8 @@
                 <option value="lesmiserables">"Les Misérables" by Victor Hugo (1900, hard)</option>
                 <option value="lahorde">"La Horde du Contrevent" by Alain Damasio (688, hard)</option>
                 <option value="lepee">"L'Épée de Vérité, Tome 1: La Première Leçon du Sorcier" by Terry Goodkind (800, hard)</option>
+                <option value="spanish" disabled>Spanish</option>
                 <option value="memorias">"Memorias de Idhún: La Resistencia" by Laura Gallego García (416, easy)</option>
-                
                 <option value="elprincipe">"El Príncipe de la Niebla" by Carlos Ruiz Zafón (232, easy)</option>
                 <option value="pedroparamo">"Pedro Páramo" by Juan Rulfo (124, medium)</option>
                 <option value="laslagrimas">"Las Lágrimas de Shiva" by César Mallorquí (320, medium)</option>
@@ -1728,6 +1944,7 @@
                 <option value="laciudad">"La Ciudad de los Prodigios" by Eduardo Mendoza (416, hard)</option>
                 <option value="ellaberinto">"El Laberinto de los Espíritus" by Carlos Ruiz Zafón (928, hard)</option>
                 <option value="eltemor">"El Temor de un Hombre Sabio" by Patrick Rothfuss (1040, hard)</option>
+                <option value="turkish" disabled>Turkish</option>
                 <option value="zaman">"Zaman Çarkı: Dönen Çark" by Murat Sönmez (320, easy)</option>
                 <option value="tuhaf">"Tuhaf Hikayeler Dükkanı" by Mehmet Berk Yaltırık (256, easy)</option>
                 <option value="biryol">"Bir Yol Hikayesi" by Hakan Bıçakcı (192, easy)</option>
@@ -1745,12 +1962,17 @@
           <td style="width: 500px">
             <select id="spring_six" style="width: 400px" onchange="modselector(this)">
                 <option value="unknown"></option>
+                <option value="horror" disabled>Horror</option>
                 <option value="dracula">"Dracula" by Bram Stoker (418, easy)</option>
+                <option value="theturnofthescrew">"The Turn of the Screw" by Henry James (124, easy)</option>
                 <option value="thewomaninblack">"The Woman in Black" by Susan Hill (208, easy)</option>
                 <option value="theshining">"The Shining" by Stephen King (688, medium)</option>
                 <option value="houseofleaves">"House of Leaves" by Mark Z. Danielewski (705, medium)</option>
+                <option value="americanpsycho">"American Psycho" by Bret Easton Ellis (399, medium)</option>
                 <option value="it">"IT" by Stephen King (1138, hard)</option>
                 <option value="theluminousdead">"The Luminous Dead" by Caitlin Starling (432, hard)</option>
+                <option value="theterror">"The Terror" by Dan Simmons (960, hard)</option>
+                <option value="scifi" disabled>Sci-Fi</option>
                 <option value="endersgame">"Ender's Game" by Orson Scott Card (352, easy)</option>
                 <option value="readyplayerone">"Ready Player One" by Ernest Cline (386, easy)</option>
                 <option value="themartian">"The Martian" by Andy Weir (384, easy)</option>
@@ -1760,6 +1982,7 @@
                 <option value="cryptonomicon">"Cryptonomicon" by Neal Stephenson (1168, hard)</option>
                 <option value="anathem">"Anathem" by Neal Stephenson (960, hard)</option>
                 <option value="thebookofthenewsun">"The Book of the New Sun" by Gene Wolfe (912, hard)</option>
+                <option value="fantasy" disabled>Fantasy</option>
                 <option value="stardust">"Stardust" by Neil Gaiman (288, easy)</option>
                 <option value="thenightcircus">"The Night Circus" by Erin Morgenstern (512, easy)</option>
                 <option value="uprooted">"Uprooted" by Naomi Novik (464, easy)</option>
@@ -1769,6 +1992,7 @@
                 <option value="thewayofkings">"The Way of Kings" by Brandon Sanderson (1007, hard)</option>
                 <option value="thebladeitself">"The Blade Itself" by Joe Abercrombie (519, hard)</option>
                 <option value="thefinalempire">"The Final Empire" by Michael J. Sullivan (541, hard)</option>
+                <option value="nonfic" disabled>Non-Fic</option>
                 <option value="becoming">"Becoming" by Michelle Obama (426, easy)</option>
                 <option value="theimmortallife">"The Immortal Life of Henrietta Lacks" by Rebecca Skloot (381, easy)</option>
                 <option value="mindset">“Mindset” by Carol Dweck (320, easy)</option>
@@ -1778,6 +2002,7 @@
                 <option value="theseven">"The 7 Habits of Highly Effective People" by Stephen R. Covey (384, hard)</option>
                 <option value="thinking">"Thinking, Fast and Slow" by Daniel Kahneman (512, hard)</option>
                 <option value="incoldblood">"In Cold Blood" by Truman Capote (343, hard)</option>
+                <option value="series" disabled>Series</option>
                 <option value="hpone">"Harry Potter and the Philosopher's Stone" by J.K. Rowling (223, easy)</option>
                 <option value="hptwo">"Harry Potter and the Chamber of Secrets" by J.K. Rowling (251, easy)</option>
                 <option value="hpthree">"Harry Potter and the Prisoner of Azkaban" by J.K. Rowling (317, easy)</option>
@@ -1789,6 +2014,7 @@
                 <option value="lotrone">"The Fellowship of the Ring" by J.R.R. Tolkien (398, hard)</option>
                 <option value="lotrtwo">"The Two Towers" by J.R.R. Tolkien (447, hard)</option>
                 <option value="lotrthree">"The Return of the King" by J.R.R. Tolkien (416, hard)</option>
+                <option value="french" disabled>French</option>
                 <option value="lepetit">"Le Petit Prince" by Antoine de Saint-Exupéry (96, easy)</option>
                 <option value="meursault">"The Meursault Investigation" by Kamel Daoud (144, easy)</option>
                 <option value="chateau">"Le Château des Étoiles, Tome 1: 1869, La Conquête de l'espace" by Alex Alice (64, easy)</option>
@@ -1798,6 +2024,7 @@
                 <option value="lesmiserables">"Les Misérables" by Victor Hugo (1900, hard)</option>
                 <option value="lahorde">"La Horde du Contrevent" by Alain Damasio (688, hard)</option>
                 <option value="lepee">"L'Épée de Vérité, Tome 1: La Première Leçon du Sorcier" by Terry Goodkind (800, hard)</option>
+                <option value="spanish" disabled>Spanish</option>
                 <option value="memorias">"Memorias de Idhún: La Resistencia" by Laura Gallego García (416, easy)</option>
                 <option value="elprincipe">"El Príncipe de la Niebla" by Carlos Ruiz Zafón (232, easy)</option>
                 <option value="pedroparamo">"Pedro Páramo" by Juan Rulfo (124, medium)</option>
@@ -1806,6 +2033,7 @@
                 <option value="laciudad">"La Ciudad de los Prodigios" by Eduardo Mendoza (416, hard)</option>
                 <option value="ellaberinto">"El Laberinto de los Espíritus" by Carlos Ruiz Zafón (928, hard)</option>
                 <option value="eltemor">"El Temor de un Hombre Sabio" by Patrick Rothfuss (1040, hard)</option>
+                <option value="turkish" disabled>Turkish</option>
                 <option value="zaman">"Zaman Çarkı: Dönen Çark" by Murat Sönmez (320, easy)</option>
                 <option value="tuhaf">"Tuhaf Hikayeler Dükkanı" by Mehmet Berk Yaltırık (256, easy)</option>
                 <option value="biryol">"Bir Yol Hikayesi" by Hakan Bıçakcı (192, easy)</option>
@@ -1827,12 +2055,17 @@
           <td style="width: 500px">
             <select id="spring_seven" style="width: 400px" onchange="modselector(this)">
                 <option value="unknown"></option>
+                <option value="horror" disabled>Horror</option>
                 <option value="dracula">"Dracula" by Bram Stoker (418, easy)</option>
+                <option value="theturnofthescrew">"The Turn of the Screw" by Henry James (124, easy)</option>
                 <option value="thewomaninblack">"The Woman in Black" by Susan Hill (208, easy)</option>
                 <option value="theshining">"The Shining" by Stephen King (688, medium)</option>
                 <option value="houseofleaves">"House of Leaves" by Mark Z. Danielewski (705, medium)</option>
+                <option value="americanpsycho">"American Psycho" by Bret Easton Ellis (399, medium)</option>
                 <option value="it">"IT" by Stephen King (1138, hard)</option>
                 <option value="theluminousdead">"The Luminous Dead" by Caitlin Starling (432, hard)</option>
+                <option value="theterror">"The Terror" by Dan Simmons (960, hard)</option>
+                <option value="scifi" disabled>Sci-Fi</option>
                 <option value="endersgame">"Ender's Game" by Orson Scott Card (352, easy)</option>
                 <option value="readyplayerone">"Ready Player One" by Ernest Cline (386, easy)</option>
                 <option value="themartian">"The Martian" by Andy Weir (384, easy)</option>
@@ -1842,6 +2075,7 @@
                 <option value="cryptonomicon">"Cryptonomicon" by Neal Stephenson (1168, hard)</option>
                 <option value="anathem">"Anathem" by Neal Stephenson (960, hard)</option>
                 <option value="thebookofthenewsun">"The Book of the New Sun" by Gene Wolfe (912, hard)</option>
+                <option value="fantasy" disabled>Fantasy</option>
                 <option value="stardust">"Stardust" by Neil Gaiman (288, easy)</option>
                 <option value="thenightcircus">"The Night Circus" by Erin Morgenstern (512, easy)</option>
                 <option value="uprooted">"Uprooted" by Naomi Novik (464, easy)</option>
@@ -1851,6 +2085,7 @@
                 <option value="thewayofkings">"The Way of Kings" by Brandon Sanderson (1007, hard)</option>
                 <option value="thebladeitself">"The Blade Itself" by Joe Abercrombie (519, hard)</option>
                 <option value="thefinalempire">"The Final Empire" by Michael J. Sullivan (541, hard)</option>
+                <option value="nonfic" disabled>Non-Fic</option>
                 <option value="becoming">"Becoming" by Michelle Obama (426, easy)</option>
                 <option value="theimmortallife">"The Immortal Life of Henrietta Lacks" by Rebecca Skloot (381, easy)</option>
                 <option value="mindset">“Mindset” by Carol Dweck (320, easy)</option>
@@ -1860,6 +2095,7 @@
                 <option value="theseven">"The 7 Habits of Highly Effective People" by Stephen R. Covey (384, hard)</option>
                 <option value="thinking">"Thinking, Fast and Slow" by Daniel Kahneman (512, hard)</option>
                 <option value="incoldblood">"In Cold Blood" by Truman Capote (343, hard)</option>
+                <option value="series" disabled>Series</option>
                 <option value="hpone">"Harry Potter and the Philosopher's Stone" by J.K. Rowling (223, easy)</option>
                 <option value="hptwo">"Harry Potter and the Chamber of Secrets" by J.K. Rowling (251, easy)</option>
                 <option value="hpthree">"Harry Potter and the Prisoner of Azkaban" by J.K. Rowling (317, easy)</option>
@@ -1871,6 +2107,7 @@
                 <option value="lotrone">"The Fellowship of the Ring" by J.R.R. Tolkien (398, hard)</option>
                 <option value="lotrtwo">"The Two Towers" by J.R.R. Tolkien (447, hard)</option>
                 <option value="lotrthree">"The Return of the King" by J.R.R. Tolkien (416, hard)</option>
+                <option value="french" disabled>French</option>
                 <option value="lepetit">"Le Petit Prince" by Antoine de Saint-Exupéry (96, easy)</option>
                 <option value="meursault">"The Meursault Investigation" by Kamel Daoud (144, easy)</option>
                 <option value="chateau">"Le Château des Étoiles, Tome 1: 1869, La Conquête de l'espace" by Alex Alice (64, easy)</option>
@@ -1880,6 +2117,7 @@
                 <option value="lesmiserables">"Les Misérables" by Victor Hugo (1900, hard)</option>
                 <option value="lahorde">"La Horde du Contrevent" by Alain Damasio (688, hard)</option>
                 <option value="lepee">"L'Épée de Vérité, Tome 1: La Première Leçon du Sorcier" by Terry Goodkind (800, hard)</option>
+                <option value="spanish" disabled>Spanish</option>
                 <option value="memorias">"Memorias de Idhún: La Resistencia" by Laura Gallego García (416, easy)</option>
                 <option value="elprincipe">"El Príncipe de la Niebla" by Carlos Ruiz Zafón (232, easy)</option>
                 <option value="pedroparamo">"Pedro Páramo" by Juan Rulfo (124, medium)</option>
@@ -1888,6 +2126,7 @@
                 <option value="laciudad">"La Ciudad de los Prodigios" by Eduardo Mendoza (416, hard)</option>
                 <option value="ellaberinto">"El Laberinto de los Espíritus" by Carlos Ruiz Zafón (928, hard)</option>
                 <option value="eltemor">"El Temor de un Hombre Sabio" by Patrick Rothfuss (1040, hard)</option>
+                <option value="turkish" disabled>Turkish</option>
                 <option value="zaman">"Zaman Çarkı: Dönen Çark" by Murat Sönmez (320, easy)</option>
                 <option value="tuhaf">"Tuhaf Hikayeler Dükkanı" by Mehmet Berk Yaltırık (256, easy)</option>
                 <option value="biryol">"Bir Yol Hikayesi" by Hakan Bıçakcı (192, easy)</option>
@@ -1905,12 +2144,17 @@
           <td style="width: 500px">
             <select id="spring_eight" style="width: 400px" onchange="modselector(this)">
                 <option value="unknown"></option>
+                <option value="horror" disabled>Horror</option>
                 <option value="dracula">"Dracula" by Bram Stoker (418, easy)</option>
+                <option value="theturnofthescrew">"The Turn of the Screw" by Henry James (124, easy)</option>
                 <option value="thewomaninblack">"The Woman in Black" by Susan Hill (208, easy)</option>
                 <option value="theshining">"The Shining" by Stephen King (688, medium)</option>
                 <option value="houseofleaves">"House of Leaves" by Mark Z. Danielewski (705, medium)</option>
+                <option value="americanpsycho">"American Psycho" by Bret Easton Ellis (399, medium)</option>
                 <option value="it">"IT" by Stephen King (1138, hard)</option>
                 <option value="theluminousdead">"The Luminous Dead" by Caitlin Starling (432, hard)</option>
+                <option value="theterror">"The Terror" by Dan Simmons (960, hard)</option>
+                <option value="scifi" disabled>Sci-Fi</option>
                 <option value="endersgame">"Ender's Game" by Orson Scott Card (352, easy)</option>
                 <option value="readyplayerone">"Ready Player One" by Ernest Cline (386, easy)</option>
                 <option value="themartian">"The Martian" by Andy Weir (384, easy)</option>
@@ -1920,6 +2164,7 @@
                 <option value="cryptonomicon">"Cryptonomicon" by Neal Stephenson (1168, hard)</option>
                 <option value="anathem">"Anathem" by Neal Stephenson (960, hard)</option>
                 <option value="thebookofthenewsun">"The Book of the New Sun" by Gene Wolfe (912, hard)</option>
+                <option value="fantasy" disabled>Fantasy</option>
                 <option value="stardust">"Stardust" by Neil Gaiman (288, easy)</option>
                 <option value="thenightcircus">"The Night Circus" by Erin Morgenstern (512, easy)</option>
                 <option value="uprooted">"Uprooted" by Naomi Novik (464, easy)</option>
@@ -1929,6 +2174,7 @@
                 <option value="thewayofkings">"The Way of Kings" by Brandon Sanderson (1007, hard)</option>
                 <option value="thebladeitself">"The Blade Itself" by Joe Abercrombie (519, hard)</option>
                 <option value="thefinalempire">"The Final Empire" by Michael J. Sullivan (541, hard)</option>
+                <option value="nonfic" disabled>Non-Fic</option>
                 <option value="becoming">"Becoming" by Michelle Obama (426, easy)</option>
                 <option value="theimmortallife">"The Immortal Life of Henrietta Lacks" by Rebecca Skloot (381, easy)</option>
                 <option value="mindset">“Mindset” by Carol Dweck (320, easy)</option>
@@ -1938,6 +2184,7 @@
                 <option value="theseven">"The 7 Habits of Highly Effective People" by Stephen R. Covey (384, hard)</option>
                 <option value="thinking">"Thinking, Fast and Slow" by Daniel Kahneman (512, hard)</option>
                 <option value="incoldblood">"In Cold Blood" by Truman Capote (343, hard)</option>
+                <option value="series" disabled>Series</option>
                 <option value="hpone">"Harry Potter and the Philosopher's Stone" by J.K. Rowling (223, easy)</option>
                 <option value="hptwo">"Harry Potter and the Chamber of Secrets" by J.K. Rowling (251, easy)</option>
                 <option value="hpthree">"Harry Potter and the Prisoner of Azkaban" by J.K. Rowling (317, easy)</option>
@@ -1949,6 +2196,7 @@
                 <option value="lotrone">"The Fellowship of the Ring" by J.R.R. Tolkien (398, hard)</option>
                 <option value="lotrtwo">"The Two Towers" by J.R.R. Tolkien (447, hard)</option>
                 <option value="lotrthree">"The Return of the King" by J.R.R. Tolkien (416, hard)</option>
+                <option value="french" disabled>French</option>
                 <option value="lepetit">"Le Petit Prince" by Antoine de Saint-Exupéry (96, easy)</option>
                 <option value="meursault">"The Meursault Investigation" by Kamel Daoud (144, easy)</option>
                 <option value="chateau">"Le Château des Étoiles, Tome 1: 1869, La Conquête de l'espace" by Alex Alice (64, easy)</option>
@@ -1958,6 +2206,7 @@
                 <option value="lesmiserables">"Les Misérables" by Victor Hugo (1900, hard)</option>
                 <option value="lahorde">"La Horde du Contrevent" by Alain Damasio (688, hard)</option>
                 <option value="lepee">"L'Épée de Vérité, Tome 1: La Première Leçon du Sorcier" by Terry Goodkind (800, hard)</option>
+                <option value="spanish" disabled>Spanish</option>
                 <option value="memorias">"Memorias de Idhún: La Resistencia" by Laura Gallego García (416, easy)</option>
                 <option value="elprincipe">"El Príncipe de la Niebla" by Carlos Ruiz Zafón (232, easy)</option>
                 <option value="pedroparamo">"Pedro Páramo" by Juan Rulfo (124, medium)</option>
@@ -1966,6 +2215,7 @@
                 <option value="laciudad">"La Ciudad de los Prodigios" by Eduardo Mendoza (416, hard)</option>
                 <option value="ellaberinto">"El Laberinto de los Espíritus" by Carlos Ruiz Zafón (928, hard)</option>
                 <option value="eltemor">"El Temor de un Hombre Sabio" by Patrick Rothfuss (1040, hard)</option>
+                <option value="turkish" disabled>Turkish</option>
                 <option value="zaman">"Zaman Çarkı: Dönen Çark" by Murat Sönmez (320, easy)</option>
                 <option value="tuhaf">"Tuhaf Hikayeler Dükkanı" by Mehmet Berk Yaltırık (256, easy)</option>
                 <option value="biryol">"Bir Yol Hikayesi" by Hakan Bıçakcı (192, easy)</option>
@@ -1977,6 +2227,8 @@
                 <option value="ask">"Aşk" by Elif Şafak (736, hard)</option>
             </select>
           </td>
+        </tr>
+        <tr style="height: 15px">
         </tr>
 
       </table>
@@ -1995,10 +2247,10 @@
           <div id='atleastonebookperquarter' style='color:red'>&nbsp;&nbsp;Be sure to read every quarter!</div>
           <div id='dontreread' style='color:green'>&nbsp;&nbsp;All of your books should be different!</div>
           <div id='readprequelsfirst' style='color:green'>&nbsp;&nbsp;Don't read series books out of order!</div>
-          <div id='atleastonenonfictionbookthisyear' style='color:orange'>&nbsp;&nbsp;Considering reading at least one nonfiction book this year!</div>
-          <div id='atleastonefictionbookperquarter' style='color:orange'>&nbsp;&nbsp;Considering reading at least one fiction book every quarter!</div>
-          <div id='atleastthreeenglishgenresthisyear' style='color:orange'>&nbsp;&nbsp;Considering reading at least three different English genres this year!</div>
-          <div id='languageproficiency' style='color:orange'>&nbsp;&nbsp;Considering developing proficiency in a foreign language by reading in that language for 2 quarters!</div>
+          <div id='atleastonenonfictionbookthisyear' style='color:orange'>&nbsp;&nbsp;Consider reading at least one nonfiction book this year!</div>
+          <div id='atleastonefictionbookperquarter' style='color:orange'>&nbsp;&nbsp;Consider reading at least one fiction book every quarter!</div>
+          <div id='atleastthreeenglishgenresthisyear' style='color:orange'>&nbsp;&nbsp;Consider reading at least three different English genres this year!</div>
+          <div id='languageproficiency' style='color:orange'>&nbsp;&nbsp;Consider developing proficiency in a foreign language by reading in that language for 2 quarters!</div>
         </td>
       </tr>
     </table>
