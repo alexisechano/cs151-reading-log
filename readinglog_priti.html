@@ -2545,7 +2545,11 @@ style(atleastonefictionbookperquarter, color, orange) :- ~isreadingfictioninever
 
 % READ AT LEAST THREE ENGLISH GENRES THIS YEAR
 genreisenglish(G) :- same(G, horror) | same(G, scifi) | same(G, fantasy) | same(G, nonfiction)
-threegenresreadthisyear :- book(B1, G1, A1, P1, D1) & book(B2, G2, A2, P2, D2) & book(B3, G3, A3, P3, D3) & genreisenglish(G1) & genreisenglish(G2) & genreisenglish(G3) & readingbookwhen(B1, QuarterNumber1) & readingbookwhen(B2, QuarterNumber2) & readingbookwhen(B3, QuarterNumber3) & mutex(G1,G2,G3)
+threegenresreadthisyear :- 
+  book(B1, G1, A1, P1, D1) & readingbookwhen(B1, QuarterNumber1) & genreisenglish(G1) &
+  book(B2, G2, A2, P2, D2) & readingbookwhen(B2, QuarterNumber2) & genreisenglish(G2) &
+  book(B3, G3, A3, P3, D3) & readingbookwhen(B3, QuarterNumber3) & genreisenglish(G3) &  
+  mutex(G1,G2,G3)
 style(atleastthreeenglishgenresthisyear, color, green) :- threegenresreadthisyear
 style(atleastthreeenglishgenresthisyear, color, orange) :- ~threegenresreadthisyear
 
