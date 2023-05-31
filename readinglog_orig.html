@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+  
+<!--=======================================================================-->
+
+  <head>
+    <title>Reading Log</title>
+    <script type='text/javascript' src='http://epilog.stanford.edu/javascript/epilog.js'></script>
+    <script type='text/javascript' src='http://worksheets.stanford.edu/javascript/worksheets.js'></script>
+  </head>
+  
+<!--=======================================================================-->
+  
+<body style='background-color:#F6F5EB' onload='initialize()'>
+  
+  <!-- Create basic, centered header -->
+  <center>
+    <header>
+      <h1 style="margin-top: 1em">College Reading Log 📚</h1>
+      <p>A CS 151 Project by Alexis Echano, Su Kara, Amelia Leon, and Priti Rangnekar</p>
+    </header>
+  </center>
+
+  <!-- Main Body for Log -->
+  <center>
+    <!-- Personal Goal Section -->
+    <div style="outline: 0.1em solid black; padding: 1em; margin: 1em; overflow: auto;">
+      <h2>Reading Goals (# of  books per genre/language)</h2>
+
+      <!-- Genre/Language Book Counter per Quarter -->
+      <table>
+        <!-- FALL -->
+        <tr>
+          <td>
+            <p style="text-align: left; margin-right: 1em;"><b>Fall</b></p>
+          </td>
+          <td>
+            Horror: <input id="fall_horror" min='0' type='number' style="width: 3em" onchange="modtext(this)"/>
+          </td>
+          <td>
+            Sci-Fi: <input id="fall_scifi" min='0' type='number' style="width: 3em" onchange="modtext(this)"/>
+          </td>
+          <td>
+           Fantasy: <input id="fall_fantasy" min='0' type='number' style="width: 3em" onchange="modtext(this)"/>
+          </td>
+          <td>
+            Non-fic: <input id="fall_nonfic" min='0' type='number' style="width: 3em" onchange="modtext(this)"/>
+          </td>
+          <td>
+            Turkish: <input id="fall_turkish" min='0' type='number' style="width: 3em" onchange="modtext(this)"/>
+          </td>
+          <td>
+            French: <input id="fall_french" min='0' type='number' style="width: 3em" onchange="modtext(this)"/>
+          </td>
+          <td>
+            Spanish: <input id="fall_spanish" min='0' type='number' style="width: 3em" onchange="modtext(this)"/>
+          </td>
+
+          <!-- TODO: ADD LOGIC TO CALC RUNNING TOTAL -->
+          <td>
+            <p id="falltotal">Total: 3 books</p>
+          </td>
+        </tr>
+        
+        <!-- WINTER -->
+        <tr>
+          <td>
+            <p style="text-align: left; margin-right: 1em;"><b>Winter</b></p>
+          </td>
+          
+          <td>
+            Horror: <input id="winter_horror" min='0' type='number' style="width: 3em" onchange="modtext(this)"/>
+          </td>
+          <td>
+            Sci-Fi: <input id="winter_scifi" min='0' type='number' style="width: 3em" onchange="modtext(this)"/>
+          </td>
+          <td>
+            Fantasy: <input id="winter_fantasy" min='0' type='number' style="width: 3em" onchange="modtext(this)"/>
+          </td>
+          <td>
+            Non-fic: <input id="winter_nonfic" min='0' type='number' style="width: 3em" onchange="modtext(this)"/>
+          </td>
+          <td>
+            Turkish: <input id="winter_turkish" min='0' type='number' style="width: 3em" onchange="modtext(this)"/>
+          </td>
+          <td>
+            French: <input id="winter_french" min='0' type='number' style="width: 3em" onchange="modtext(this)"/>
+          </td>
+          <td>
+            Spanish: <input id="winter_spanish" min='0'type='number' style="width: 3em" onchange="modtext(this)"/>
+          </td>
+
+          <!-- TODO: ADD LOGIC TO CALC RUNNING TOTAL -->
+          <td>
+            <p id="wintertotal">Total: 3 books</p>
+          </td>
+        </tr>
+
+        <!-- SPRING -->
+        <tr style="margin-bottom: 1em;">
+          <td>
+            <p style="text-align: left; margin-right: 1em; margin-bottom: 1em;"><b>Spring</b></p>
+          </td>
+          
+          <td>
+            Horror: <input id="spring_horror" min='0' type='number' style="width: 3em" onchange="modtext(this)"/>
+          </td>
+          <td>
+            Sci-Fi: <input id="spring_scifi" min='0' type='number' style="width: 3em" onchange="modtext(this)"/>
+          </td>
+          <td>
+            Fantasy: <input id="spring_fantasy" min='0' type='number' style="width: 3em" onchange="modtext(this)"/>
+          </td>
+          <td>
+            Non-fic: <input id="spring_nonfic" min='0' type='number' style="width: 3em" onchange="modtext(this)"/>
+          </td>
+          <td>
+            Turkish: <input id="spring_turkish" min='0' type='number' style="width: 3em" onchange="modtext(this)"/>
+          </td>
+          <td>
+            French: <input id="spring_french" min='0' type='number' style="width: 3em" onchange="modtext(this)"/>
+          </td>
+          <td>
+            Spanish: <input id="spring_spanish" min='0' type='number' style="width: 3em" onchange="modtext(this)"/>
+          </td>
+
+          <!-- TODO: ADD LOGIC TO CALC RUNNING TOTAL -->
+          <td>
+            <p id="springtotal">Total: 3 books</p>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <!-- Reading Rules -->
+    <div class="rulessection" style="padding: 1em; margin: 1em;">
+      <h2>Reading Goal Rules</h2>
+
+      <!-- Split Rules -->
+      <table width='100%'>
+        <tr>
+          <td width='50%' valign="top" style="text-align: center;">
+            Firm Rules:<br/>
+            <!-- TODO: CHANGE WITH ACTUAL RULES, THERE ARE FROM PROGRAM SHEET -->
+            <div id='discretemath' style='color:red'>&nbsp;&nbsp;CS 103 required.</div>
+            <div id='theory' style='color:red'>&nbsp;&nbsp;One theoretical course.</div>
+            <div id='problogic' style='color:red'>&nbsp;&nbsp;CS 109 or CS157.</div>
+            <div id='prerequisites' style='color:red'>&nbsp;&nbsp;Prerequisites satisfied.</div>
+            <div id='fivecourses' style='color:red'>&nbsp;&nbsp;At least five courses.</div>
+        </td>
+        <td width='50%' valign="top" style="text-align: center;">
+          Encouraged Rules<br/>
+          <!-- TODO: CHANGE WITH ACTUAL RULES, THERE ARE FROM PROGRAM SHEET -->
+          <div id='discretemath' style='color:red'>&nbsp;&nbsp;CS 103 required.</div>
+          <div id='theory' style='color:red'>&nbsp;&nbsp;One theoretical course.</div>
+          <div id='problogic' style='color:red'>&nbsp;&nbsp;CS 109 or CS157.</div>
+          <div id='prerequisites' style='color:red'>&nbsp;&nbsp;Prerequisites satisfied.</div>
+          <div id='fivecourses' style='color:red'>&nbsp;&nbsp;At least five courses.</div>
+        </td>
+      </tr>
+    </table>
+    </div>
+
+    <!-- Logging Section -->
+    <!--TODO: ADD LOGIC TO AUTO ADD THE AMOUNT OF BOOKS AS INDICATED BY THE TOTAL AMOUNT UP THERE, USE JS + LOGIC-->
+    <div style="outline: 0.1em solid black; padding: 1em; margin: 2.5em 2.5em 2.5em 2.5em;">
+      <h2>Reading Schedule Breakdown</h2>
+      <table>
+        <!-- FALL -->
+        <tr>
+          <td>
+            <p style="text-align: left; margin-right: 1em;"><b>Fall</b></p>
+          </td>
+          
+        </tr>
+        
+        <!-- WINTER -->
+        <tr>
+          <td>
+            <p style="text-align: left; margin-right: 1em;"><b>Winter</b></p>
+          </td>
+
+        </tr>
+
+        <!-- SPRING -->
+        <tr style="margin-bottom: 1em;">
+          <td>
+            <p style="text-align: left; margin-right: 1em;"><b>Spring</b></p>
+          </td>
+          
+          
+        </tr>
+      </table>
+    </div>
+
+
+    <!-- Book Specific Rules -->
+    <div class="rulessection" style="padding: 1em; margin: 1em;">
+      <h2>Book Rules</h2>
+
+      <!-- Split Rules -->
+      <table width='100%'>
+        <tr>
+          <td width='50%' valign="top" style="text-align: center;">
+            Firm Rules:<br/>
+            <!-- TODO: CHANGE WITH ACTUAL RULES, THERE ARE FROM PROGRAM SHEET -->
+            <div id='discretemath' style='color:red'>&nbsp;&nbsp;CS 103 required.</div>
+            <div id='theory' style='color:red'>&nbsp;&nbsp;One theoretical course.</div>
+            <div id='problogic' style='color:red'>&nbsp;&nbsp;CS 109 or CS157.</div>
+            <div id='prerequisites' style='color:red'>&nbsp;&nbsp;Prerequisites satisfied.</div>
+            <div id='fivecourses' style='color:red'>&nbsp;&nbsp;At least five courses.</div>
+        </td>
+        <td width='50%' valign="top" style="text-align: center;">
+          Encouraged Rules<br/>
+          <!-- TODO: CHANGE WITH ACTUAL RULES, THERE ARE FROM PROGRAM SHEET -->
+          <div id='discretemath' style='color:red'>&nbsp;&nbsp;CS 103 required.</div>
+          <div id='theory' style='color:red'>&nbsp;&nbsp;One theoretical course.</div>
+          <div id='problogic' style='color:red'>&nbsp;&nbsp;CS 109 or CS157.</div>
+          <div id='prerequisites' style='color:red'>&nbsp;&nbsp;Prerequisites satisfied.</div>
+          <div id='fivecourses' style='color:red'>&nbsp;&nbsp;At least five courses.</div>
+        </td>
+      </tr>
+    </table>
+    </div>
+  </center>
+  
+<!--=======================================================================-->
+
+<dataset id='lambda' style='font-family:courier;display:none' rows='20' cols='20'>
+</dataset>
+
+<!--=======================================================================-->
+
+<dataset id='testdata' type='text/hrf' style='display:none'>
+</dataset>
+
+<!--=======================================================================-->
+
+<ruleset id='library' style='font-family:courier;display:none' rows='20'>
+</ruleset>
+
+<!--=======================================================================-->
+
+</body>
+
+<!--=======================================================================-->
+
+</html>
