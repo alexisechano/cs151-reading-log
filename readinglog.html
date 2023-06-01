@@ -99,8 +99,6 @@
         <tr style="height: 15px">
         </tr>
 
-
-
         <!-- WINTER -->
         <tr>
           <td style="width: 100px; text-align: left; font-weight: bold">
@@ -169,6 +167,7 @@
         </tr>
         <tr style="height: 15px">
         </tr>
+
         <!-- SPRING -->
         <tr>
           <td style="width: 100px; text-align: left; font-weight: bold">
@@ -646,12 +645,14 @@ innerhtml(avgdifficultyspring, 0) :- ~isreadinginspring
 function loadOptions(selectElement) {
     selectElement.add(new Option('', 'unknown'));
 
+    //for disabled genre headers
     var horror = document.createElement("option");
     horror.text = 'Horror';
     horror.value = 'horror';
     horror.disabled = true;
     selectElement.appendChild(horror);
 
+    //for all books in genre
     selectElement.add(new Option('"Dracula" by Bram Stoker (418, easy)', 'dracula'));
     selectElement.add(new Option('"The Turn of the Screw" by Henry James (124, easy)', 'theturnofthescrew'));
     selectElement.add(new Option('"The Woman in Black" by Susan Hill (208, easy)', 'thewomaninblack'));
