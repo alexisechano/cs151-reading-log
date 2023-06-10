@@ -494,9 +494,9 @@ select(QuarterSelection, Book) :: readingbookwhen(Book, QuarterSelection)
 select(QuarterSelection, Book) :: readingbookwhen(Y, QuarterSelection) ==> ~readingbookwhen(Y, QuarterSelection)
 
 % FOR AT LEAST ONE BOOK PER QUARTER
-isreadinginfall :- book(B, G, A, P, D) & (readingbookwhen(B, fall_one) | readingbookwhen(B, fall_two) | readingbookwhen(B, fall_three) | readingbookwhen(B, fall_four) | readingbookwhen(B, fall_five) | readingbookwhen(B, fall_six) |readingbookwhen(B, fall_seven) | readingbookwhen(B, fall_eight))
-isreadinginwinter :- book(B, G, A, P, D) & (readingbookwhen(B, winter_one) | readingbookwhen(B, winter_two) | readingbookwhen(B, winter_three) | readingbookwhen(B, winter_four) | readingbookwhen(B, winter_five) | readingbookwhen(B, winter_six) |readingbookwhen(B, winter_seven) | readingbookwhen(B, winter_eight))
-isreadinginspring :- book(B, G, A, P, D) & (readingbookwhen(B, spring_one) | readingbookwhen(B, spring_two) | readingbookwhen(B, spring_three) | readingbookwhen(B, spring_four) | readingbookwhen(B, spring_five) | readingbookwhen(B, spring_six) |readingbookwhen(B, spring_seven) | readingbookwhen(B, spring_eight))
+isreadinginfall :- book(B, G, A, P, D) & readingbookwhen(B, QuarterNumber) & quarternumberinquarter(QuarterNumber, fall)
+isreadinginwinter :-  book(B, G, A, P, D) & readingbookwhen(B, QuarterNumber) & quarternumberinquarter(QuarterNumber, winter)
+isreadinginspring :-  book(B, G, A, P, D) & readingbookwhen(B, QuarterNumber) & quarternumberinquarter(QuarterNumber, spring)
 isreadingineveryquarter :- isreadinginfall & isreadinginwinter & isreadinginspring
 style(atleastonebookperquarter, color, green) :- isreadingineveryquarter
 style(atleastonebookperquarter, color, red) :- ~isreadingineveryquarter
@@ -513,7 +513,10 @@ style(atleastonenonfictionbookthisyear, color, green) :- isreadinganonfictionboo
 style(atleastonenonfictionbookthisyear, color, orange) :- ~isreadinganonfictionbook
 
 % READ AT LEAST ONE FICTION BOOK PER QUARTER
-bookisfiction(B) :- book(B, horror, A, P, D) | book(B, scifi, A, P, D) | book(B, fantasy, A, P, D)
+bookisfiction(B) :- book(B, horror, A, P, D) 
+bookisfiction(B) :- book(B, scifi, A, P, D) 
+bookisfiction(B) :- book(B, fantasy, A, P, D)
+
 isreadingfictioninfall :- bookisfiction(B) & readingbookwhen(B, QuarterNumber) & quarternumberinquarter(QuarterNumber, fall)
 isreadingfictioninwinter :- bookisfiction(B) & readingbookwhen(B, QuarterNumber) & quarternumberinquarter(QuarterNumber, winter)
 isreadingfictioninspring :- bookisfiction(B) & readingbookwhen(B, QuarterNumber) & quarternumberinquarter(QuarterNumber, spring)
@@ -522,7 +525,11 @@ style(atleastonefictionbookperquarter, color, green) :- isreadingfictionineveryq
 style(atleastonefictionbookperquarter, color, orange) :- ~isreadingfictionineveryquarter
 
 % READ AT LEAST THREE ENGLISH GENRES THIS YEAR
-genreisenglish(G) :- same(G, horror) | same(G, scifi) | same(G, fantasy) | same(G, nonfiction)
+genreisenglish(G) :- same(G, horror) 
+genreisenglish(G) :- same(G, scifi)
+genreisenglish(G) :- same(G, fantasy) 
+genreisenglish(G) :- same(G, nonfiction)
+
 threegenresreadthisyear :-
   book(B1, G1, A1, P1, D1) & readingbookwhen(B1, QuarterNumber1) & genreisenglish(G1) &
   book(B2, G2, A2, P2, D2) & readingbookwhen(B2, QuarterNumber2) & genreisenglish(G2) &
