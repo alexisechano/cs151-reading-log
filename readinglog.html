@@ -257,6 +257,7 @@
           <div id='atleastonefictionbookperquarter' style='color:orange'>&nbsp;&nbsp;Consider reading at least one fiction book every quarter!</div>
           <div id='atleastthreeenglishgenresthisyear' style='color:orange'>&nbsp;&nbsp;Consider reading at least three different English genres this year!</div>
           <div id='languageproficiency' style='color:orange'>&nbsp;&nbsp;Consider developing proficiency in a foreign language by reading in that language for 2 quarters!</div>
+          <div id='increasingdifficulty' style='color:green'>&nbsp;&nbsp;Consider increasing your average difficulty from each quarter to the next!</div>
         </td>
       </tr>
     </table>
@@ -284,6 +285,10 @@
               Average Difficulty of Unique Books Read in Fall: <label id='avgdifficultyfall' value=0>0</label><br><br>
               Average Difficulty of Unique Books Read in Winter: <label id='avgdifficultywinter' value=0>0</label><br><br>
               Average Difficulty of Unique Books Read in Spring: <label id='avgdifficultyspring' value=0>0</label><br><br>
+              Total Number of Hours Spent Reading Unique Books: <label id='totalhours' value=0>0</label><br><br>
+              Total Number of Hours Spent Reading Unique Books in Fall: <label id='totalhoursfall' value=0>0</label><br><br>
+              Total Number of Hours Spent Reading Unique Books in Winter: <label id='totalhourswinter' value=0>0</label><br><br>
+              Total Number of Hours Spent Reading Unique Books in Spring: <label id='totalhoursspring' value=0>0</label><br><br>
             </td>
             <td valign="top">
                 <canvas id="chartbooks" style="max-width:400px"></canvas>
@@ -295,6 +300,9 @@
         <tr>
             <td valign="top">
                 <canvas id="chartdifficulty" style="max-width:400px"></canvas>
+            </td>
+            <td valign="top">
+                <canvas id="charthours" style="max-width:400px"></canvas>
             </td>
             <td valign="top">
                 <canvas id="chartgender" style="max-width:400px"></canvas>
@@ -443,82 +451,8 @@ futurequarter(winter, spring)
 % MAKE SELECTIONS PERSIST AND SWITCH
 select(QuarterSelection, Book) :: value(QuarterSelection, Book)
 select(QuarterSelection, Book) :: value(QuarterSelection, Y) ==> ~value(QuarterSelection, Y)
-
-% FALL
-select(fall_one, Book) :: readingbookwhen(Book, fall_one)
-select(fall_one, Book) :: readingbookwhen(Y, fall_one) ==> ~readingbookwhen(Y, fall_one)
-
-select(fall_two, Book) :: readingbookwhen(Book, fall_two)
-select(fall_two, Book) :: readingbookwhen(Y, fall_two) ==> ~readingbookwhen(Y, fall_two)
-
-select(fall_three, Book) :: readingbookwhen(Book, fall_three)
-select(fall_three, Book) :: readingbookwhen(Y, fall_three) ==> ~readingbookwhen(Y, fall_three)
-
-select(fall_four, Book) :: readingbookwhen(Book, fall_four)
-select(fall_four, Book) :: readingbookwhen(Y, fall_four) ==> ~readingbookwhen(Y, fall_four)
-
-select(fall_five, Book) :: readingbookwhen(Book, fall_five)
-select(fall_five, Book) :: readingbookwhen(Y, fall_five) ==> ~readingbookwhen(Y, fall_five)
-
-select(fall_six, Book) :: readingbookwhen(Book, fall_six)
-select(fall_six, Book) :: readingbookwhen(Y, fall_six) ==> ~readingbookwhen(Y, fall_six)
-
-select(fall_seven, Book) :: readingbookwhen(Book, fall_seven)
-select(fall_seven, Book) :: readingbookwhen(Y, fall_seven) ==> ~readingbookwhen(Y, fall_seven)
-
-select(fall_eight, Book) :: readingbookwhen(Book, fall_eight)
-select(fall_eight, Book) :: readingbookwhen(Y, fall_eight) ==> ~readingbookwhen(Y, fall_eight)
-
-% WINTER
-select(winter_one, Book) :: readingbookwhen(Book, winter_one)
-select(winter_one, Book) :: readingbookwhen(Y, winter_one) ==> ~readingbookwhen(Y, winter_one)
-
-select(winter_two, Book) :: readingbookwhen(Book, winter_two)
-select(winter_two, Book) :: readingbookwhen(Y, winter_two) ==> ~readingbookwhen(Y, winter_two)
-
-select(winter_three, Book) :: readingbookwhen(Book, winter_three)
-select(winter_three, Book) :: readingbookwhen(Y, winter_three) ==> ~readingbookwhen(Y, winter_three)
-
-select(winter_four, Book) :: readingbookwhen(Book, winter_four)
-select(winter_four, Book) :: readingbookwhen(Y, winter_four) ==> ~readingbookwhen(Y, winter_four)
-
-select(winter_five, Book) :: readingbookwhen(Book, winter_five)
-select(winter_five, Book) :: readingbookwhen(Y, winter_five) ==> ~readingbookwhen(Y, winter_five)
-
-select(winter_six, Book) :: readingbookwhen(Book, winter_six)
-select(winter_six, Book) :: readingbookwhen(Y, winter_six) ==> ~readingbookwhen(Y, winter_six)
-
-select(winter_seven, Book) :: readingbookwhen(Book, winter_seven)
-select(winter_seven, Book) :: readingbookwhen(Y, winter_seven) ==> ~readingbookwhen(Y, winter_seven)
-
-select(winter_eight, Book) :: readingbookwhen(Book, winter_eight)
-select(winter_eight, Book) :: readingbookwhen(Y, winter_eight) ==> ~readingbookwhen(Y, winter_eight)
-
-% SPRING
-select(spring_one, Book) :: readingbookwhen(Book, spring_one)
-select(spring_one, Book) :: readingbookwhen(Y, spring_one) ==> ~readingbookwhen(Y, spring_one)
-
-select(spring_two, Book) :: readingbookwhen(Book, spring_two)
-select(spring_two, Book) :: readingbookwhen(Y, spring_two) ==> ~readingbookwhen(Y, spring_two)
-
-select(spring_three, Book) :: readingbookwhen(Book, spring_three)
-select(spring_three, Book) :: readingbookwhen(Y, spring_three) ==> ~readingbookwhen(Y, spring_three)
-
-select(spring_four, Book) :: readingbookwhen(Book, spring_four)
-select(spring_four, Book) :: readingbookwhen(Y, spring_four) ==> ~readingbookwhen(Y, spring_four)
-
-select(spring_five, Book) :: readingbookwhen(Book, spring_five)
-select(spring_five, Book) :: readingbookwhen(Y, spring_five) ==> ~readingbookwhen(Y, spring_five)
-
-select(spring_six, Book) :: readingbookwhen(Book, spring_six)
-select(spring_six, Book) :: readingbookwhen(Y, spring_six) ==> ~readingbookwhen(Y, spring_six)
-
-select(spring_seven, Book) :: readingbookwhen(Book, spring_seven)
-select(spring_seven, Book) :: readingbookwhen(Y, spring_seven) ==> ~readingbookwhen(Y, spring_seven)
-
-select(spring_eight, Book) :: readingbookwhen(Book, spring_eight)
-select(spring_eight, Book) :: readingbookwhen(Y, spring_eight) ==> ~readingbookwhen(Y, spring_eight)
-
+select(QuarterSelection, Book) :: readingbookwhen(Book, QuarterSelection)
+select(QuarterSelection, Book) :: readingbookwhen(Y, QuarterSelection) ==> ~readingbookwhen(Y, QuarterSelection)
 
 % FOR AT LEAST ONE BOOK PER QUARTER
 isreadinginfall :- book(B, G, A, P, D) & (readingbookwhen(B, fall_one) | readingbookwhen(B, fall_two) | readingbookwhen(B, fall_three) | readingbookwhen(B, fall_four) | readingbookwhen(B, fall_five) | readingbookwhen(B, fall_six) |readingbookwhen(B, fall_seven) | readingbookwhen(B, fall_eight))
@@ -608,15 +542,25 @@ innerhtml(totalnumberofpagesreadwinter, Count) :- totalnumberofpagesquarter(Coun
 innerhtml(totalnumberofpagesreadspring, Count) :- totalnumberofpagesquarter(Count, spring)
 
 % STATISTICS: AVERAGE DIFFICULTY
+isreading :- isreadinginfall | isreadinginwinter | isreadinginspring
+
 first(X!Y,X)
 meandifficulty(T) :-
+  isreading & 
   setofall([D, B],
     book(B, G, A, P, D) &
     readingbookwhen(B, QuarterNumber), S) &
   map(first, S, L) &
   mean(L, T)
 
+meandifficulty(T) :- ~isreading & same(T, 0)
+
+meandifficultyquarter(T, Q) :- same(Q, fall) & ~isreadinginfall & same(T, 0)
+meandifficultyquarter(T, Q) :- same(Q, winter) & ~isreadinginwinter & same(T, 0)
+meandifficultyquarter(T, Q) :- same(Q, spring) & ~isreadinginspring & same(T, 0)
+
 meandifficultyquarter(T, Q) :-
+  same(Q, fall) & isreadinginfall & 
   setofall([D, B],
     book(B, G, A, P, D) &
     readingbookwhen(B, QuarterNumber) &
@@ -624,19 +568,66 @@ meandifficultyquarter(T, Q) :-
   map(first, S, L) &
   mean(L, T)
 
-isreading :- isreadinginfall | isreadinginwinter | isreadinginspring
+meandifficultyquarter(T, Q) :-
+  same(Q, winter) & isreadinginwinter & 
+  setofall([D, B],
+    book(B, G, A, P, D) &
+    readingbookwhen(B, QuarterNumber) &
+    quarternumberinquarter(QuarterNumber, Q), S) &
+  map(first, S, L) &
+  mean(L, T)
 
-innerhtml(avgdifficulty, Avg) :- isreading & meandifficulty(Avg)
-innerhtml(avgdifficulty, 0) :- ~isreading
+meandifficultyquarter(T, Q) :-
+  same(Q, spring) & isreadinginspring & 
+  setofall([D, B],
+    book(B, G, A, P, D) &
+    readingbookwhen(B, QuarterNumber) &
+    quarternumberinquarter(QuarterNumber, Q), S) &
+  map(first, S, L) &
+  mean(L, T)
 
-innerhtml(avgdifficultyfall, Avg) :- isreadinginfall & meandifficultyquarter(Avg, fall)
-innerhtml(avgdifficultyfall, 0) :- ~isreadinginfall
+innerhtml(avgdifficulty, Avg) :- meandifficulty(Avg)
+innerhtml(avgdifficultyfall, Avg) :- meandifficultyquarter(Avg, fall)
+innerhtml(avgdifficultywinter, Avg) :- meandifficultyquarter(Avg, winter)
+innerhtml(avgdifficultyspring, Avg) :- meandifficultyquarter(Avg, spring)
 
-innerhtml(avgdifficultywinter, Avg) :- isreadinginwinter & meandifficultyquarter(Avg, winter)
-innerhtml(avgdifficultywinter, 0) :- ~isreadinginwinter
+% STATISTICS: TIME EXPECTED TO TAKE TO READ BOOK: for difficulty 1, assume 50 pgs per hour; 2 - 40 pgs per hour; 3 - 30 pages per hour
+timetakenforbook(B, T) :- book(B, G, A, P, D) & same(D,1) & evaluate(quotient(P, 50), T)
+timetakenforbook(B, T) :- book(B, G, A, P, D) & same(D,2) & evaluate(quotient(P, 40), T)
+timetakenforbook(B, T) :- book(B, G, A, P, D) & same(D,3) & evaluate(quotient(P, 30), T)
 
-innerhtml(avgdifficultyspring, Avg) :- isreadinginspring & meandifficultyquarter(Avg, spring)
-innerhtml(avgdifficultyspring, 0) :- ~isreadinginspring
+readingtime(T) :-
+  setofall([T, B],
+    book(B, G, A, P, D) &
+    readingbookwhen(B, QuarterNumber) &
+    timetakenforbook(B, T), S) &
+  map(first, S, L) &
+  sum(L, T)
+
+  readingtimeforquarter(T, Q) :-
+  setofall([T, B],
+    book(B, G, A, P, D) &
+    readingbookwhen(B, QuarterNumber) &
+    quarternumberinquarter(QuarterNumber, Q) &
+    timetakenforbook(B, T), S) &
+  map(first, S, L) &
+  sum(L, T)
+
+innerhtml(totalhours, Count) :- readingtime(Count) & updatechart()
+innerhtml(totalhoursfall, Count) :- readingtimeforquarter(Count, fall)
+innerhtml(totalhourswinter, Count) :- readingtimeforquarter(Count, winter)
+innerhtml(totalhoursspring, Count) :- readingtimeforquarter(Count, spring)
+
+
+% RULE BASED ON STATISTICS: AVERAGE DIFFICULTY BETWEEN QUARTERS
+increasingormaintainingaveragedifficultyfromfalltowinter :- meandifficultyquarter(Avgfall, fall) & meandifficultyquarter(Avgwinter, winter) & leq(Avgfall, Avgwinter)
+increasingormaintainingaveragedifficultyfromwintertospring :- meandifficultyquarter(Avgwinter, winter) & meandifficultyquarter(Avgspring, spring) & leq(Avgwinter, Avgspring)
+alwaysincreasingormaintainingaveragedifficulty :- increasingormaintainingaveragedifficultyfromfalltowinter & increasingormaintainingaveragedifficultyfromwintertospring
+
+style(increasingdifficulty, color, green) :- alwaysincreasingormaintainingaveragedifficulty  
+style(increasingdifficulty, color, orange) :- ~alwaysincreasingormaintainingaveragedifficulty  
+
+
 </ruleset>
 
 <!--=======================================================================-->
@@ -812,6 +803,7 @@ var genYValues = [0, 0];
 var bookColors = ["red", "red", "red"];
 var pageColors = ["green", "green", "green"];
 var diffColors = ["purple", "purple", "purple"];
+var hourColors = ["orange", "orange", "orange"]
 var genderColors = ["pink", "blue"];
 
 var chartbooks = new Chart("chartbooks", {
@@ -871,6 +863,25 @@ var chartdifficulty = new Chart("chartdifficulty", {
   }
 });
 
+var charthours = new Chart("charthours", {
+  type: "bar",
+    data: {
+      labels: xValues,
+      datasets: [{
+        label: 'Hours Spent Reading Per Quarter',
+        backgroundColor: hourColors,
+        data: yValues
+      }]
+    },
+  options: {
+     scales: {
+         y: {
+           beginAtZero: true
+         }
+     }
+  }
+});
+
 var chartgender = new Chart("chartgender", {
   type: "pie",
     data: {
@@ -916,6 +927,12 @@ function updatecharts() {
     chartdifficulty.data.datasets[0].data.push(parseInt(document.getElementById('avgdifficultywinter').innerText));
     chartdifficulty.data.datasets[0].data.push(parseInt(document.getElementById('avgdifficultyspring').innerText));
     chartdifficulty.update();
+
+    charthours.data.datasets[0].data = []
+    charthours.data.datasets[0].data.push(parseInt(document.getElementById('totalhoursfall').innerText));
+    charthours.data.datasets[0].data.push(parseInt(document.getElementById('totalhourswinter').innerText));
+    charthours.data.datasets[0].data.push(parseInt(document.getElementById('totalhoursspring').innerText));
+    charthours.update();
 
     //alert(parseInt(document.getElementById('totalnumberofbookswomenauthors').innerText));
     chartgender.data.datasets[0].data = []
