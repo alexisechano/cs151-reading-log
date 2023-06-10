@@ -516,6 +516,7 @@ style(atleastonenonfictionbookthisyear, color, orange) :- ~isreadinganonfictionb
 bookisfiction(B) :- book(B, horror, A, P, D) 
 bookisfiction(B) :- book(B, scifi, A, P, D) 
 bookisfiction(B) :- book(B, fantasy, A, P, D)
+bookisfiction(B) :- book(B, series, A, P, D)
 
 isreadingfictioninfall :- bookisfiction(B) & readingbookwhen(B, QuarterNumber) & quarternumberinquarter(QuarterNumber, fall)
 isreadingfictioninwinter :- bookisfiction(B) & readingbookwhen(B, QuarterNumber) & quarternumberinquarter(QuarterNumber, winter)
@@ -529,6 +530,7 @@ genreisenglish(G) :- same(G, horror)
 genreisenglish(G) :- same(G, scifi)
 genreisenglish(G) :- same(G, fantasy) 
 genreisenglish(G) :- same(G, nonfiction)
+genreisenglish(G) :- same(G, series)
 
 threegenresreadthisyear :-
   book(B1, G1, A1, P1, D1) & readingbookwhen(B1, QuarterNumber1) & genreisenglish(G1) &
