@@ -25,15 +25,42 @@
   <!-- Main Body for Log -->
   <center>
     <!-- Personal Goal Section -->
-    <div style="outline: 0.1em solid black; padding: 1em; margin: 1em; overflow: auto;">
+    <div style="outline: 0.1em solid black; margin: 1em; overflow: auto;">
       <h2>Reading Goals</h2>
+
+      <table style="margin-bottom: 1em">
+        <tr>
+          <td style="width: 550px; text-align: left; font-weight: bold">
+            GOAL FOR HOURS SPENT READING UNIQUE BOOKS IN FALL
+          </td>
+          <td style="width: 50px">
+            <input id="goal_fall_hours" min='0' type='number' style="width: 400px" onchange="modtext(this); updatecharts();"></select>
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 550px; text-align: left; font-weight: bold">
+            GOAL FOR HOURS SPENT READING UNIQUE BOOKS IN WINTER
+          </td>
+          <td style="width: 50px">
+            <input id="goal_winter_hours" min='0' type='number' style="width: 400px" onchange="modtext(this); updatecharts();"></select>
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 550px; text-align: left; font-weight: bold">
+            GOAL FOR HOURS SPENT READING UNIQUE BOOKS IN SPRING
+          </td>
+          <td style="width: 50px">
+            <input id="goal_spring_hours" min='0' type='number' style="width: 400px" onchange="modtext(this); updatecharts();"></select>
+          </td>
+        </tr>
+      </table>
 
       <!-- Genre/Language Book Counter per Quarter -->
       <table>
         <!-- FALL -->
         <tr>
-          <td style="width: 100px; text-align: left; font-weight: bold">
-            FALL
+          <td style="width: 200px; text-align: left; font-weight: bold">
+            BOOKS FOR FALL
           </td>
           <td>
           1:
@@ -102,7 +129,7 @@
         <!-- WINTER -->
         <tr>
           <td style="width: 100px; text-align: left; font-weight: bold">
-            WINTER
+            BOOKS FOR WINTER
           </td>
           <td>
           1:
@@ -171,7 +198,7 @@
         <!-- SPRING -->
         <tr>
           <td style="width: 100px; text-align: left; font-weight: bold">
-            SPRING
+            BOOKS FOR SPRING
           </td>
           <td>
           1:
@@ -251,8 +278,13 @@
         </td>
         <td>
           <div id='atleastonebookperquarter' style='color:red'>&nbsp;&nbsp;Be sure to read every quarter!</div>
+          <div id='meetingreadinghoursgoalfall' style='color:red'>&nbsp;&nbsp;Meet or exceed your reading hour goal for fall!</div>
+          <div id='meetingreadinghoursgoalwinter' style='color:red'>&nbsp;&nbsp;Meet or exceed your reading hour goal for winter!</div>
+          <div id='meetingreadinghoursgoalspring' style='color:red'>&nbsp;&nbsp;Meet or exceed your reading hour goal for spring!</div>
+
           <div id='dontreread' style='color:green'>&nbsp;&nbsp;All of your books should be different!</div>
           <div id='readprequelsfirst' style='color:green'>&nbsp;&nbsp;Don't read series books out of order!</div>
+
           <div id='atleastonenonfictionbookthisyear' style='color:orange'>&nbsp;&nbsp;Consider reading at least one nonfiction book this year!</div>
           <div id='atleastonefictionbookperquarter' style='color:orange'>&nbsp;&nbsp;Consider reading at least one fiction book every quarter!</div>
           <div id='atleastthreeenglishgenresthisyear' style='color:orange'>&nbsp;&nbsp;Consider reading at least three different English genres this year!</div>
@@ -448,7 +480,14 @@ futurequarter(winter, spring)
 <!--=======================================================================-->
 
 <ruleset id='library' style='font-family:courier;display:none' rows='20'>
-% MAKE SELECTIONS PERSIST AND SWITCH
+% MAKE SELECTIONS PERSIST AND SWITCH FOR GOAL HOURS
+select(QuarterHoursGoal, NumHours) :: value(QuarterHoursGoal, NumHours)
+select(QuarterHoursGoal, NumHours) :: value(QuarterHoursGoal, Y) ==> ~value(QuarterHoursGoal, Y)
+select(QuarterHoursGoal, NumHours) :: quartergoalhours(QuarterHoursGoal, NumHours)
+select(QuarterHoursGoal, NumHours) :: quartergoalhours(QuarterHoursGoal, Y) ==> ~quartergoalhours(QuarterHoursGoal, Y)
+
+
+% MAKE SELECTIONS PERSIST AND SWITCH FOR BOOKS
 select(QuarterSelection, Book) :: value(QuarterSelection, Book)
 select(QuarterSelection, Book) :: value(QuarterSelection, Y) ==> ~value(QuarterSelection, Y)
 select(QuarterSelection, Book) :: readingbookwhen(Book, QuarterSelection)
@@ -627,6 +666,19 @@ alwaysincreasingormaintainingaveragedifficulty :- increasingormaintainingaverage
 style(increasingdifficulty, color, green) :- alwaysincreasingormaintainingaveragedifficulty  
 style(increasingdifficulty, color, orange) :- ~alwaysincreasingormaintainingaveragedifficulty  
 
+% MEET READING GOAL FOR EVERY QUARTER
+meetinggoalinfall :- quartergoalhours(QuarterHoursGoal, NumHours) & same(QuarterHoursGoal, goal_fall_hours) & readingtimeforquarter(Count, fall) & leq(NumHours, Count)
+meetinggoalinwinter :- quartergoalhours(QuarterHoursGoal, NumHours) & same(QuarterHoursGoal, goal_winter_hours) & readingtimeforquarter(Count, winter) & leq(NumHours, Count)
+meetinggoalinspring :- quartergoalhours(QuarterHoursGoal, NumHours) & same(QuarterHoursGoal, goal_spring_hours) & readingtimeforquarter(Count, spring) & leq(NumHours, Count)
+
+style(meetingreadinghoursgoalfall, color, green) :- meetinggoalinfall
+style(meetingreadinghoursgoalfall, color, red) :- ~meetinggoalinfall
+
+style(meetingreadinghoursgoalwinter, color, green) :- meetinggoalinwinter
+style(meetingreadinghoursgoalwinter, color, red) :- ~meetinggoalinwinter
+
+style(meetingreadinghoursgoalspring, color, green) :- meetinggoalinspring
+style(meetingreadinghoursgoalspring, color, red) :- ~meetinggoalinspring
 
 </ruleset>
 
