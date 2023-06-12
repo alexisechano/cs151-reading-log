@@ -586,7 +586,7 @@ totalnumberofpagesquarter(T, Q) :-
   map(first, S, L) &
   sum(L, T)
 
-innerhtml(totalnumberofpagesread, Count) :- totalnumberofpages(Count) & updatechart()
+innerhtml(totalnumberofpagesread, Count) :- totalnumberofpages(Count)
 innerhtml(totalnumberofpagesreadfall, Count) :- totalnumberofpagesquarter(Count, fall)
 innerhtml(totalnumberofpagesreadwinter, Count) :- totalnumberofpagesquarter(Count, winter)
 innerhtml(totalnumberofpagesreadspring, Count) :- totalnumberofpagesquarter(Count, spring)
@@ -663,7 +663,7 @@ readingtime(T) :-
   map(first, S, L) &
   sum(L, T)
 
-innerhtml(totalhours, Count) :- readingtime(Count) & updatechart()
+innerhtml(totalhours, Count) :- readingtime(Count)
 innerhtml(totalhoursfall, Count) :- readingtimeforquarter(Count, fall)
 innerhtml(totalhourswinter, Count) :- readingtimeforquarter(Count, winter)
 innerhtml(totalhoursspring, Count) :- readingtimeforquarter(Count, spring)
